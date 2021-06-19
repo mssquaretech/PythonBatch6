@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.4 on win32)" generated="20210618 11:44:58.358" rpa="false">
+<suite id="s1" name="HouseHunt" source="C:\Users\karan\PycharmProjects\HouseHunt\Tests\HouseHunt.robot">
+<kw name="Getting screenshot under dict" library="Env" type="setup">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CURRENTDATETIME}</var>
+</assign>
+<msg timestamp="20210618 11:44:58.596" level="INFO">${CURRENTDATETIME} = 2021-06-18 11:44:58.596</msg>
+<status status="PASS" starttime="20210618 11:44:58.596" endtime="20210618 11:44:58.596"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CURRENTDATETIME}</arg>
+<arg>results_format=%y.%m.%d.%H.%M.%S</arg>
+</arguments>
+<assign>
+<var>${FILEDATETIME}</var>
+</assign>
+<msg timestamp="20210618 11:44:58.604" level="INFO">${FILEDATETIME} = results_format=21.06.18.11.44.58</msg>
+<status status="PASS" starttime="20210618 11:44:58.596" endtime="20210618 11:44:58.604"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>C:\\Users\\karan\\PycharmProjects\\HouseHunt\\Config/../Results/Screenshot_${FILEDATETIME}</arg>
+</arguments>
+<msg timestamp="20210618 11:44:58.604" level="INFO" html="yes">Created directory '&lt;a href="file://C:\Users\karan\PycharmProjects\HouseHunt\Results\Screenshot_results_format=21.06.18.11.44.58"&gt;C:\Users\karan\PycharmProjects\HouseHunt\Results\Screenshot_results_format=21.06.18.11.44.58&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20210618 11:44:58.604" endtime="20210618 11:44:58.604"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>C:\\Users\\karan\\PycharmProjects\\HouseHunt\\Config/../Results/Screenshot_${FILEDATETIME}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:44:58.604" endtime="20210618 11:44:58.604"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:44:58.596" endtime="20210618 11:44:58.604"></status>
+</kw>
+<test id="s1-t1" name="Househunt search flow">
+<kw name="Given I navigate to &quot;https://househunt.london.ac.uk/&quot; using &quot;${BROWSER}&quot;" library="HousehuntSD">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210618 11:44:58.604" level="INFO">Opening browser 'chrome' to base url 'https://househunt.london.ac.uk/'.</msg>
+<status status="PASS" starttime="20210618 11:44:58.604" endtime="20210618 11:45:03.395"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210618 11:45:03.395" endtime="20210618 11:45:03.515"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:03.515" endtime="20210618 11:45:03.515"></status>
+</kw>
+<kw name="PageLoad" library="HouseHuntPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20210618 11:45:03.545" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20210618 11:45:03.515" endtime="20210618 11:45:03.545"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:03.515" endtime="20210618 11:45:03.545"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:44:58.604" endtime="20210618 11:45:03.545"></status>
+</kw>
+<kw name="And I click on found out property link on Home Page" library="HousehuntSD">
+<kw name="Click on found out property" library="HouseHuntPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${foundoutpropertyXpath}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:03.554" level="INFO">Clicking element '//nav[@class='primary-nav']/descendant::a[contains(@href,'find-your-property')]'.</msg>
+<status status="PASS" starttime="20210618 11:45:03.554" endtime="20210618 11:45:03.635"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:03.554" endtime="20210618 11:45:03.635"></status>
+</kw>
+<kw name="Move to found out proprty window" library="Findoutpage">
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<assign>
+<var>${hanldes}</var>
+</assign>
+<msg timestamp="20210618 11:45:03.643" level="INFO">${hanldes} = ['CDwindow-97EF39A5E0EBC5B594D1B40D8545FB16', 'CDwindow-FB98BB52D5639BDCEBD448D2695D4551']</msg>
+<status status="PASS" starttime="20210618 11:45:03.635" endtime="20210618 11:45:03.643"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>${hanldes}[1]</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:03.643" endtime="20210618 11:45:03.750"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:03.635" endtime="20210618 11:45:03.750"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:03.553" endtime="20210618 11:45:03.750"></status>
+</kw>
+<kw name="And I click on search section on new window" library="HousehuntSD">
+<kw name="Click on search" library="Findoutpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchLink}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:03.750" level="INFO">Clicking element '//aside[@id='sidebar-first']/descendant::li[contains(@class,'first leaf')]'.</msg>
+<status status="PASS" starttime="20210618 11:45:03.750" endtime="20210618 11:45:07.359"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Search A Property</arg>
+</arguments>
+<msg timestamp="20210618 11:45:07.390" level="INFO">Current page contains text 'Search A Property'.</msg>
+<status status="PASS" starttime="20210618 11:45:07.359" endtime="20210618 11:45:07.390"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:03.750" endtime="20210618 11:45:07.390"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:03.750" endtime="20210618 11:45:07.390"></status>
+</kw>
+<kw name="When I select university and campus for search" library="HousehuntSD">
+<kw name="Select university" library="Findoutpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${UniversityDropDown}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:07.390" level="INFO">Clicking element '//div[@class='container-fluid']//div[text()=' University ']'.</msg>
+<status status="PASS" starttime="20210618 11:45:07.390" endtime="20210618 11:45:07.498"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${UniversitydropdownOpened}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:07.498" endtime="20210618 11:45:07.539"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectUniversityName}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:07.539" level="INFO">Clicking element '//span[text()='Royal Academy of Music (RAM)']'.</msg>
+<status status="PASS" starttime="20210618 11:45:07.539" endtime="20210618 11:45:08.598"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:07.390" endtime="20210618 11:45:08.598"></status>
+</kw>
+<kw name="Select campus" library="Findoutpage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${CampusElement}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:08.598" endtime="20210618 11:45:08.640"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CampusElement}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:08.640" level="INFO">Clicking element '//div[text()=' Campus ']'.</msg>
+<status status="PASS" starttime="20210618 11:45:08.640" endtime="20210618 11:45:08.729"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectCampusElement}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:08.729" level="INFO">Clicking element '//span[text()='Main Campus']'.</msg>
+<status status="PASS" starttime="20210618 11:45:08.729" endtime="20210618 11:45:08.825"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:08.598" endtime="20210618 11:45:08.825"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:07.390" endtime="20210618 11:45:08.825"></status>
+</kw>
+<kw name="Then I get result for selected university campus" library="HousehuntSD">
+<kw name="Click Submit" library="Findoutpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickSubmit}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:08.825" level="INFO">Clicking element '//div[@class='row filter-row']/descendant::div[@class='submit-group']/button'.</msg>
+<status status="PASS" starttime="20210618 11:45:08.825" endtime="20210618 11:45:08.929"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Resultshown}</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:08.929" endtime="20210618 11:45:24.786"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210618 11:45:25.427" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot_results_format%3D21.06.18.11.44.58/selenium-screenshot-1.png"&gt;&lt;img src="Screenshot_results_format%3D21.06.18.11.44.58/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210618 11:45:24.786" endtime="20210618 11:45:25.427"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:08.825" endtime="20210618 11:45:25.427"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:08.825" endtime="20210618 11:45:25.427"></status>
+</kw>
+<kw name="And I select for low to high price filter" library="HousehuntSD">
+<kw name="Selection of required filter" library="Findoutpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FilteroptionClick}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:25.435" level="INFO">Clicking element '//div[contains(@class,'col-md-2 ng-touched')]/descendant::div[@class='value ng-star-inserted']'.</msg>
+<status status="PASS" starttime="20210618 11:45:25.435" endtime="20210618 11:45:25.562"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectfromFilterOption}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:25.570" level="INFO">Clicking element '//span[contains(text(),'Low to High')]'.</msg>
+<status status="PASS" starttime="20210618 11:45:25.562" endtime="20210618 11:45:25.682"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SelectfromFilterOption}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:25.682" endtime="20210618 11:45:25.714"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${SeachLoadingXapth}</arg>
+<arg>40s</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:25.714" endtime="20210618 11:45:49.855"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:25.435" endtime="20210618 11:45:49.855"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:25.435" endtime="20210618 11:45:49.855"></status>
+</kw>
+<kw name="And I print first &quot;8&quot; university" library="HousehuntSD">
+<kw name="Print required &quot;${linksRequired}&quot; of university Name" library="Findoutpage">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${NumberofLinks}</arg>
+</arguments>
+<assign>
+<var>@{NumberoflistLinkitem}</var>
+</assign>
+<msg timestamp="20210618 11:45:49.879" level="INFO">@{NumberoflistLinkitem} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="8834d4ebd653161535a78c1b490a7dfd", element="9393b49f-9516-452c-9bd0-2382645c9fbd")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210618 11:45:49.855" endtime="20210618 11:45:49.879"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${NumberoflistLinkitem}</arg>
+</arguments>
+<assign>
+<var>${CountLink}</var>
+</assign>
+<msg timestamp="20210618 11:45:49.879" level="INFO">Length is 25</msg>
+<msg timestamp="20210618 11:45:49.879" level="INFO">${CountLink} = 25</msg>
+<status status="PASS" starttime="20210618 11:45:49.879" endtime="20210618 11:45:49.879"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | ${CountLink} ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:49.914" level="INFO">${x} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210618 11:45:49.879" endtime="20210618 11:45:49.914"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:49.914" endtime="20210618 11:45:49.922"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.914" endtime="20210618 11:45:49.922"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:49.923" endtime="20210618 11:45:49.923"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.879" endtime="20210618 11:45:49.923"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:49.952" level="INFO">${x} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210618 11:45:49.923" endtime="20210618 11:45:49.952"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:49.952" endtime="20210618 11:45:49.952"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.952" endtime="20210618 11:45:49.952"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:49.952" endtime="20210618 11:45:49.952"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.923" endtime="20210618 11:45:49.952"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:49.993" level="INFO">${x} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210618 11:45:49.952" endtime="20210618 11:45:49.993"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.001" endtime="20210618 11:45:50.001"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.001" endtime="20210618 11:45:50.001"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.001" endtime="20210618 11:45:50.001"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.952" endtime="20210618 11:45:50.001"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:50.042" level="INFO">${x} = Woodville House</msg>
+<status status="PASS" starttime="20210618 11:45:50.001" endtime="20210618 11:45:50.042"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.042" endtime="20210618 11:45:50.042"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.042" endtime="20210618 11:45:50.042"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.042" endtime="20210618 11:45:50.042"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.001" endtime="20210618 11:45:50.042"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:50.086" level="INFO">${x} = Lancaster Grove</msg>
+<status status="PASS" starttime="20210618 11:45:50.042" endtime="20210618 11:45:50.094"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.094" endtime="20210618 11:45:50.094"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.094" endtime="20210618 11:45:50.094"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.094" endtime="20210618 11:45:50.094"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.042" endtime="20210618 11:45:50.094"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:50.135" level="INFO">${x} = Elly House, - Queen's Crescent</msg>
+<status status="PASS" starttime="20210618 11:45:50.094" endtime="20210618 11:45:50.135"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.135" endtime="20210618 11:45:50.135"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.135" endtime="20210618 11:45:50.135"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.135" endtime="20210618 11:45:50.135"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.094" endtime="20210618 11:45:50.135"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:50.177" level="INFO">${x} = pollard house</msg>
+<status status="PASS" starttime="20210618 11:45:50.135" endtime="20210618 11:45:50.177"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.177" endtime="20210618 11:45:50.185"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.177" endtime="20210618 11:45:50.185"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.185" endtime="20210618 11:45:50.185"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.135" endtime="20210618 11:45:50.185"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(//h3[@class='card-info__address mt-2 mb-2'])[${i}]</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 11:45:50.225" level="INFO">${x} = A Fleet Road , Hampstead</msg>
+<status status="PASS" starttime="20210618 11:45:50.185" endtime="20210618 11:45:50.225"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&lt;${linksRequired}</arg>
+<arg>log to console</arg>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 11:45:50.225" endtime="20210618 11:45:50.225"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${linksRequired}</arg>
+</arguments>
+<msg timestamp="20210618 11:45:50.225" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210618 11:45:50.225" endtime="20210618 11:45:50.225"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.185" endtime="20210618 11:45:50.225"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.879" endtime="20210618 11:45:50.225"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.855" endtime="20210618 11:45:50.225"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:49.855" endtime="20210618 11:45:50.225"></status>
+</kw>
+<kw name="close browser" library="Env" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210618 11:45:50.234" endtime="20210618 11:45:52.399"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:45:50.225" endtime="20210618 11:45:52.399"></status>
+</kw>
+<status status="PASS" starttime="20210618 11:44:58.604" endtime="20210618 11:45:52.399" critical="yes"></status>
+</test>
+<doc>Househunt search script using robot framework</doc>
+<status status="PASS" starttime="20210618 11:44:58.358" endtime="20210618 11:45:52.399"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="HouseHunt">HouseHunt</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210618 11:44:58.350" level="ERROR">Error in file 'C:\Users\karan\PycharmProjects\HouseHunt\Tests\HouseHunt.robot' on line 6: Setting 'Documentation' is allowed only once. Only the first value is used.</msg>
+<msg timestamp="20210618 11:44:58.596" level="ERROR">Error in file 'C:\Users\karan\PycharmProjects\HouseHunt\Tests\HouseHunt.robot' on line 7: Resource file '..\HouseHunt\HousehuntSD.robot' does not exist.</msg>
+</errors>
+</robot>

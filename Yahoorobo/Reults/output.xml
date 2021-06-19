@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.4 on win32)" generated="20210612 11:25:33.025" rpa="false">
+<suite id="s1" name="YatraFlight" source="C:\Users\karan\PycharmProjects\Yahoorobo\Tests\YatraFlight.robot">
+<test id="s1-t1" name="Yatra flight search flow">
+<kw name="Given I navigate to yatra.com home page" library="YatraSD">
+<arguments>
+<arg>https://yatra.com</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:33.153" level="INFO">Opening browser 'chrome' to base url 'https://yatra.com'.</msg>
+<status status="PASS" starttime="20210612 11:25:33.153" endtime="20210612 11:25:36.598"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210612 11:25:36.599" endtime="20210612 11:25:36.719"></status>
+</kw>
+<kw name="Page Load" library="YatraHomePage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Yatra</arg>
+</arguments>
+<msg timestamp="20210612 11:25:36.741" level="INFO">Current page contains text 'Yatra'.</msg>
+<status status="PASS" starttime="20210612 11:25:36.720" endtime="20210612 11:25:36.741"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:36.719" endtime="20210612 11:25:36.741"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:33.153" endtime="20210612 11:25:36.741"></status>
+</kw>
+<kw name="When I select road trip from delhi to mumbai" library="YatraSD">
+<kw name="Select origin flight city name" library="YatraHomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${clickInputOrigion}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:36.743" level="INFO">Clicking element '//input[@id='BE_flight_origin_city']'.</msg>
+<status status="PASS" starttime="20210612 11:25:36.743" endtime="20210612 11:25:36.810"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210612 11:25:39.815" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:36.810" endtime="20210612 11:25:39.815"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${clickInputOrigion}</arg>
+<arg>Delhi</arg>
+</arguments>
+<msg timestamp="20210612 11:25:39.816" level="INFO">Typing text 'Delhi' into text field '//input[@id='BE_flight_origin_city']'.</msg>
+<status status="PASS" starttime="20210612 11:25:39.815" endtime="20210612 11:25:39.874"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210612 11:25:42.874" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:39.874" endtime="20210612 11:25:42.874"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${selectDropdown}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:42.895" level="INFO">Current page contains element '//div[@class='ac_airport']/p'.</msg>
+<status status="PASS" starttime="20210612 11:25:42.874" endtime="20210612 11:25:42.895"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selectDropdown}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:42.895" level="INFO">Clicking element '//div[@class='ac_airport']/p'.</msg>
+<status status="PASS" starttime="20210612 11:25:42.895" endtime="20210612 11:25:42.935"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:36.742" endtime="20210612 11:25:42.935"></status>
+</kw>
+<kw name="Select destination city name" library="YatraHomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickInputdestination}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:42.936" level="INFO">Clicking element '//input[@name='flight_destination']'.</msg>
+<status status="PASS" starttime="20210612 11:25:42.935" endtime="20210612 11:25:42.978"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210612 11:25:45.980" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:42.979" endtime="20210612 11:25:45.980"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickInputdestination}</arg>
+<arg>Bom</arg>
+</arguments>
+<msg timestamp="20210612 11:25:45.981" level="INFO">Typing text 'Bom' into text field '//input[@name='flight_destination']'.</msg>
+<status status="PASS" starttime="20210612 11:25:45.980" endtime="20210612 11:25:46.027"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210612 11:25:49.041" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:46.028" endtime="20210612 11:25:49.041"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${selectDropdown}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:49.053" level="INFO">Current page contains element '//div[@class='ac_airport']/p'.</msg>
+<status status="PASS" starttime="20210612 11:25:49.041" endtime="20210612 11:25:49.053"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selectDropdown}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:49.054" level="INFO">Clicking element '//div[@class='ac_airport']/p'.</msg>
+<status status="PASS" starttime="20210612 11:25:49.053" endtime="20210612 11:25:49.090"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210612 11:25:51.093" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:49.091" endtime="20210612 11:25:51.093"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:42.935" endtime="20210612 11:25:51.093"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:36.742" endtime="20210612 11:25:51.093"></status>
+</kw>
+<kw name="And I select dep date as 24th June and return date 26th June" library="YatraSD">
+<kw name="Select depature date" library="YatraHomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${clickdepatureDate}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:51.094" level="INFO">Clicking element '//input[@id='BE_flight_origin_date']'.</msg>
+<status status="PASS" starttime="20210612 11:25:51.094" endtime="20210612 11:25:51.135"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210612 11:25:53.147" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:51.135" endtime="20210612 11:25:53.147"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selecdepatureDate}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:53.148" level="INFO">Clicking element '//td[@id='24/06/2021']'.</msg>
+<status status="PASS" starttime="20210612 11:25:53.147" endtime="20210612 11:25:53.211"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:51.094" endtime="20210612 11:25:53.211"></status>
+</kw>
+<kw name="Select return date" library="YatraHomePage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210612 11:25:56.213" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:53.212" endtime="20210612 11:25:56.213"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${clickreturnDate}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:56.213" level="INFO">Clicking element '//input[@id='BE_flight_arrival_date']'.</msg>
+<status status="PASS" starttime="20210612 11:25:56.213" endtime="20210612 11:25:56.268"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210612 11:25:58.279" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:56.268" endtime="20210612 11:25:58.279"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selecreturnDate}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:58.280" level="INFO">Clicking element '//td[@id='26/06/2021']'.</msg>
+<status status="PASS" starttime="20210612 11:25:58.279" endtime="20210612 11:25:58.331"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:53.211" endtime="20210612 11:25:58.331"></status>
+</kw>
+<status status="PASS" starttime="20210612 11:25:51.093" endtime="20210612 11:25:58.331"></status>
+</kw>
+<kw name="And I select for 2 adult with economy class" library="YatraSD">
+<kw name="Select number of traveller" library="YatraHomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${travellerselection}</arg>
+</arguments>
+<msg timestamp="20210612 11:25:58.332" level="INFO">Clicking element '//label[@class='travellerLabel']'.</msg>
+<status status="PASS" starttime="20210612 11:25:58.332" endtime="20210612 11:25:58.374"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210612 11:26:00.382" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210612 11:25:58.374" endtime="20210612 11:26:00.382"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${clickOnAddTraveller}</arg>
+</arguments>
+<msg timestamp="20210612 11:26:00.383" level="INFO">Clicking element '//span[@class='ddSpinnerPlus']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210612 11:26:01.797" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210612 11:26:01.476" endtime="20210612 11:26:01.797"></status>
+</kw>
+<msg timestamp="20210612 11:26:01.799" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="ddSpinnerPlus"&gt;&lt;/span&gt; is not clickable at point (127, 395). Other element would receive the click: &lt;td data-date="21/06/2021" title="Monday, 21 June 2021" id="21/06/2021" class="inActiveTD"&gt;...&lt;/td&gt;
+  (Session info: chrome=91.0.4472.77)
+</msg>
+<status status="FAIL" starttime="20210612 11:26:00.383" endtime="20210612 11:26:01.800"></status>
+</kw>
+<status status="FAIL" starttime="20210612 11:25:58.332" endtime="20210612 11:26:01.800"></status>
+</kw>
+<status status="FAIL" starttime="20210612 11:25:58.332" endtime="20210612 11:26:01.800"></status>
+</kw>
+<status status="FAIL" starttime="20210612 11:25:33.153" endtime="20210612 11:26:01.800" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="ddSpinnerPlus"&gt;&lt;/span&gt; is not clickable at point (127, 395). Other element would receive the click: &lt;td data-date="21/06/2021" title="Monday, 21 June 2021" id="21/06/2021" class="inActiveTD"&gt;...&lt;/td&gt;
+  (Session info: chrome=91.0.4472.77)
+</status>
+</test>
+<doc>Yahoo search flight Test case</doc>
+<status status="FAIL" starttime="20210612 11:25:33.026" endtime="20210612 11:26:01.802"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="YatraFlight">YatraFlight</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
