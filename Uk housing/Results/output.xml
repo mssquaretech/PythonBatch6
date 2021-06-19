@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210617 18:34:47.036" rpa="false">
+<suite id="s1" name="HouseHunt" source="C:\Users\prasadwa\PycharmProjects\RobotAssignment1\Tests\HouseHunt.robot">
+<test id="s1-t1" name="Searching properties on HouseHunt.com">
+<kw name="Given I navigate to HouseHunt.com" library="HouseHuntStepDefination">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://househunt.london.ac.uk/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210617 18:34:48.075" level="INFO">Opening browser 'chrome' to base url 'https://househunt.london.ac.uk/'.</msg>
+<status status="PASS" starttime="20210617 18:34:48.074" endtime="20210617 18:35:13.900"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210617 18:35:13.901" endtime="20210617 18:35:14.451"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210617 18:35:18.305" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210617 18:35:14.452" endtime="20210617 18:35:18.306"></status>
+</kw>
+<kw name="Load" library="HouseHuntPages">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>London</arg>
+</arguments>
+<msg timestamp="20210617 18:35:18.394" level="INFO">Current page contains text 'London'.</msg>
+<status status="PASS" starttime="20210617 18:35:18.309" endtime="20210617 18:35:18.394"></status>
+</kw>
+<status status="PASS" starttime="20210617 18:35:18.306" endtime="20210617 18:35:18.395"></status>
+</kw>
+<status status="PASS" starttime="20210617 18:34:48.073" endtime="20210617 18:35:18.395"></status>
+</kw>
+<kw name="And I click to Find Your Property" library="HouseHuntStepDefination">
+<kw name="user click on find property" library="HouseHuntPages">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FindYourPropertyXpath}</arg>
+</arguments>
+<msg timestamp="20210617 18:35:18.399" level="INFO">Clicking element '//ul[@class='ng-star-inserted']/child::li[2]'.</msg>
+<status status="PASS" starttime="20210617 18:35:18.398" endtime="20210617 18:35:19.223"></status>
+</kw>
+<status status="PASS" starttime="20210617 18:35:18.397" endtime="20210617 18:35:19.224"></status>
+</kw>
+<status status="PASS" starttime="20210617 18:35:18.397" endtime="20210617 18:35:19.225"></status>
+</kw>
+<kw name="And I switch to New Window" library="HouseHuntStepDefination">
+<kw name="user switch to New Window" library="HouseHuntPages">
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>New</arg>
+</arguments>
+<status status="PASS" starttime="20210617 18:35:19.232" endtime="20210617 18:35:19.310"></status>
+</kw>
+<status status="PASS" starttime="20210617 18:35:19.230" endtime="20210617 18:35:19.311"></status>
+</kw>
+<status status="PASS" starttime="20210617 18:35:19.229" endtime="20210617 18:35:19.311"></status>
+</kw>
+<kw name="And I click on Search on New opened window" library="HouseHuntStepDefination">
+<kw name="user click on Search link" library="HouseHuntPages">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchXpath}</arg>
+</arguments>
+<msg timestamp="20210617 18:35:19.322" level="INFO">Clicking element '(//a[@href="/find-accommodation/housing-database" and text()='Search'])[1]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210617 18:35:24.052" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210617 18:35:23.056" endtime="20210617 18:35:24.053"></status>
+</kw>
+<msg timestamp="20210617 18:35:24.094" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<status status="FAIL" starttime="20210617 18:35:19.321" endtime="20210617 18:35:24.095"></status>
+</kw>
+<status status="FAIL" starttime="20210617 18:35:19.316" endtime="20210617 18:35:24.096"></status>
+</kw>
+<status status="FAIL" starttime="20210617 18:35:19.314" endtime="20210617 18:35:24.097"></status>
+</kw>
+<status status="FAIL" starttime="20210617 18:34:48.071" endtime="20210617 18:35:24.107" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=91.0.4472.106)
+</status>
+</test>
+<doc>This project contains how to search properties on HouseHunt.com</doc>
+<status status="FAIL" starttime="20210617 18:34:47.042" endtime="20210617 18:35:24.138"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="HouseHunt">HouseHunt</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210612 11:27:27.265" rpa="false">
+<suite id="s1" name="YatraTesting" source="C:\Users\prasadwa\PycharmProjects\RobotAssignment1\Tests\YatraTesting.robot">
+<test id="s1-t1" name="Launching Yatra">
+<kw name="given I navigate to &quot;https://Yatra.com&quot; website" library="YatraStepDefination">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Link1}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210612 11:27:27.593" level="FAIL">Variable '${Link1}' not found.</msg>
+<status status="FAIL" starttime="20210612 11:27:27.592" endtime="20210612 11:27:27.593"></status>
+</kw>
+<status status="FAIL" starttime="20210612 11:27:27.590" endtime="20210612 11:27:27.593"></status>
+</kw>
+<status status="FAIL" starttime="20210612 11:27:27.590" endtime="20210612 11:27:27.593" critical="yes">Variable '${Link1}' not found.</status>
+</test>
+<status status="FAIL" starttime="20210612 11:27:27.267" endtime="20210612 11:27:27.594"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="YatraTesting">YatraTesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
