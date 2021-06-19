@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210619 09:00:45.008" rpa="false">
+<suite id="s1" name="LoopTesting" source="C:\Users\nshakya\PycharmProjects\PythonAutomation\RobotFrameworkLoop\Tests\LoopTesting.robot">
+<test id="s1-t1" name="Validate Amazon Home Page">
+<kw name="Given I Open Amazon Home Page" library="AmazonSD">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${AmazonURL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210619 09:00:45.423" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20210619 09:00:45.423" endtime="20210619 09:00:51.654"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210619 09:00:51.655" endtime="20210619 09:00:51.940"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:45.422" endtime="20210619 09:00:51.941"></status>
+</kw>
+<kw name="When I Select to Category" library="AmazonSD">
+<kw name="Click on Amazon Category Drop Down" library="AmazonHomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Category}</arg>
+</arguments>
+<msg timestamp="20210619 09:00:51.946" level="INFO">Clicking element '//select[@name='url']'.</msg>
+<status status="PASS" starttime="20210619 09:00:51.944" endtime="20210619 09:00:52.295"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:51.943" endtime="20210619 09:00:52.296"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:51.942" endtime="20210619 09:00:52.296"></status>
+</kw>
+<kw name="And I Click all Category" library="AmazonSD">
+<assign>
+<var>${Result}</var>
+</assign>
+<kw name="Click on All Category from Drop Down" library="AmazonHomePage">
+<assign>
+<var>${Result}</var>
+</assign>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${DropDownOption}</arg>
+</arguments>
+<assign>
+<var>${Count}</var>
+</assign>
+<msg timestamp="20210619 09:00:52.323" level="INFO">${Count} = 42</msg>
+<status status="PASS" starttime="20210619 09:00:52.298" endtime="20210619 09:00:52.323"></status>
+</kw>
+<kw name="${x} IN RANGE [ 1 | ${Count} ]" type="for">
+<kw name="${x} = 1" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.324" level="INFO">Clicking element '//select[@name='url']/child::option[1]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.324" endtime="20210619 09:00:52.377"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.323" endtime="20210619 09:00:52.377"></status>
+</kw>
+<kw name="${x} = 2" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.378" level="INFO">Clicking element '//select[@name='url']/child::option[2]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.377" endtime="20210619 09:00:52.590"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.377" endtime="20210619 09:00:52.590"></status>
+</kw>
+<kw name="${x} = 3" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.592" level="INFO">Clicking element '//select[@name='url']/child::option[3]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.591" endtime="20210619 09:00:52.683"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.591" endtime="20210619 09:00:52.683"></status>
+</kw>
+<kw name="${x} = 4" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.684" level="INFO">Clicking element '//select[@name='url']/child::option[4]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.684" endtime="20210619 09:00:52.744"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.683" endtime="20210619 09:00:52.744"></status>
+</kw>
+<kw name="${x} = 5" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.746" level="INFO">Clicking element '//select[@name='url']/child::option[5]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.744" endtime="20210619 09:00:52.820"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.744" endtime="20210619 09:00:52.820"></status>
+</kw>
+<kw name="${x} = 6" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.821" level="INFO">Clicking element '//select[@name='url']/child::option[6]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.820" endtime="20210619 09:00:52.976"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.820" endtime="20210619 09:00:52.976"></status>
+</kw>
+<kw name="${x} = 7" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:52.977" level="INFO">Clicking element '//select[@name='url']/child::option[7]'.</msg>
+<status status="PASS" starttime="20210619 09:00:52.976" endtime="20210619 09:00:53.044"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.976" endtime="20210619 09:00:53.044"></status>
+</kw>
+<kw name="${x} = 8" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.044" level="INFO">Clicking element '//select[@name='url']/child::option[8]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.044" endtime="20210619 09:00:53.150"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.044" endtime="20210619 09:00:53.150"></status>
+</kw>
+<kw name="${x} = 9" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.153" level="INFO">Clicking element '//select[@name='url']/child::option[9]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.151" endtime="20210619 09:00:53.266"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.151" endtime="20210619 09:00:53.266"></status>
+</kw>
+<kw name="${x} = 10" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.267" level="INFO">Clicking element '//select[@name='url']/child::option[10]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.266" endtime="20210619 09:00:53.361"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.266" endtime="20210619 09:00:53.361"></status>
+</kw>
+<kw name="${x} = 11" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.362" level="INFO">Clicking element '//select[@name='url']/child::option[11]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.361" endtime="20210619 09:00:53.456"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.361" endtime="20210619 09:00:53.456"></status>
+</kw>
+<kw name="${x} = 12" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.458" level="INFO">Clicking element '//select[@name='url']/child::option[12]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.457" endtime="20210619 09:00:53.604"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.456" endtime="20210619 09:00:53.604"></status>
+</kw>
+<kw name="${x} = 13" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.608" level="INFO">Clicking element '//select[@name='url']/child::option[13]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.605" endtime="20210619 09:00:53.711"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.605" endtime="20210619 09:00:53.711"></status>
+</kw>
+<kw name="${x} = 14" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.713" level="INFO">Clicking element '//select[@name='url']/child::option[14]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.712" endtime="20210619 09:00:53.774"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.712" endtime="20210619 09:00:53.774"></status>
+</kw>
+<kw name="${x} = 15" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.775" level="INFO">Clicking element '//select[@name='url']/child::option[15]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.774" endtime="20210619 09:00:53.843"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.774" endtime="20210619 09:00:53.843"></status>
+</kw>
+<kw name="${x} = 16" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.844" level="INFO">Clicking element '//select[@name='url']/child::option[16]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.843" endtime="20210619 09:00:53.918"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.843" endtime="20210619 09:00:53.918"></status>
+</kw>
+<kw name="${x} = 17" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:53.920" level="INFO">Clicking element '//select[@name='url']/child::option[17]'.</msg>
+<status status="PASS" starttime="20210619 09:00:53.919" endtime="20210619 09:00:54.043"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:53.919" endtime="20210619 09:00:54.043"></status>
+</kw>
+<kw name="${x} = 18" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.044" level="INFO">Clicking element '//select[@name='url']/child::option[18]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.044" endtime="20210619 09:00:54.119"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.043" endtime="20210619 09:00:54.119"></status>
+</kw>
+<kw name="${x} = 19" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.120" level="INFO">Clicking element '//select[@name='url']/child::option[19]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.119" endtime="20210619 09:00:54.202"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.119" endtime="20210619 09:00:54.202"></status>
+</kw>
+<kw name="${x} = 20" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.203" level="INFO">Clicking element '//select[@name='url']/child::option[20]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.203" endtime="20210619 09:00:54.285"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.202" endtime="20210619 09:00:54.286"></status>
+</kw>
+<kw name="${x} = 21" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.287" level="INFO">Clicking element '//select[@name='url']/child::option[21]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.286" endtime="20210619 09:00:54.487"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.286" endtime="20210619 09:00:54.488"></status>
+</kw>
+<kw name="${x} = 22" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.491" level="INFO">Clicking element '//select[@name='url']/child::option[22]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.489" endtime="20210619 09:00:54.618"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.489" endtime="20210619 09:00:54.618"></status>
+</kw>
+<kw name="${x} = 23" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.619" level="INFO">Clicking element '//select[@name='url']/child::option[23]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.618" endtime="20210619 09:00:54.683"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.618" endtime="20210619 09:00:54.683"></status>
+</kw>
+<kw name="${x} = 24" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.684" level="INFO">Clicking element '//select[@name='url']/child::option[24]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.683" endtime="20210619 09:00:54.751"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.683" endtime="20210619 09:00:54.752"></status>
+</kw>
+<kw name="${x} = 25" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.753" level="INFO">Clicking element '//select[@name='url']/child::option[25]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.752" endtime="20210619 09:00:54.812"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.752" endtime="20210619 09:00:54.812"></status>
+</kw>
+<kw name="${x} = 26" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.813" level="INFO">Clicking element '//select[@name='url']/child::option[26]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.812" endtime="20210619 09:00:54.869"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.812" endtime="20210619 09:00:54.869"></status>
+</kw>
+<kw name="${x} = 27" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:54.871" level="INFO">Clicking element '//select[@name='url']/child::option[27]'.</msg>
+<status status="PASS" starttime="20210619 09:00:54.869" endtime="20210619 09:00:55.013"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:54.869" endtime="20210619 09:00:55.013"></status>
+</kw>
+<kw name="${x} = 28" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.014" level="INFO">Clicking element '//select[@name='url']/child::option[28]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.013" endtime="20210619 09:00:55.080"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.013" endtime="20210619 09:00:55.080"></status>
+</kw>
+<kw name="${x} = 29" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.082" level="INFO">Clicking element '//select[@name='url']/child::option[29]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.081" endtime="20210619 09:00:55.151"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.080" endtime="20210619 09:00:55.151"></status>
+</kw>
+<kw name="${x} = 30" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.152" level="INFO">Clicking element '//select[@name='url']/child::option[30]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.152" endtime="20210619 09:00:55.228"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.151" endtime="20210619 09:00:55.228"></status>
+</kw>
+<kw name="${x} = 31" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.229" level="INFO">Clicking element '//select[@name='url']/child::option[31]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.228" endtime="20210619 09:00:55.296"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.228" endtime="20210619 09:00:55.296"></status>
+</kw>
+<kw name="${x} = 32" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.297" level="INFO">Clicking element '//select[@name='url']/child::option[32]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.297" endtime="20210619 09:00:55.362"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.296" endtime="20210619 09:00:55.362"></status>
+</kw>
+<kw name="${x} = 33" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.362" level="INFO">Clicking element '//select[@name='url']/child::option[33]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.362" endtime="20210619 09:00:55.463"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.362" endtime="20210619 09:00:55.463"></status>
+</kw>
+<kw name="${x} = 34" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.464" level="INFO">Clicking element '//select[@name='url']/child::option[34]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.463" endtime="20210619 09:00:55.573"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.463" endtime="20210619 09:00:55.574"></status>
+</kw>
+<kw name="${x} = 35" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.576" level="INFO">Clicking element '//select[@name='url']/child::option[35]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.575" endtime="20210619 09:00:55.709"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.574" endtime="20210619 09:00:55.709"></status>
+</kw>
+<kw name="${x} = 36" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.712" level="INFO">Clicking element '//select[@name='url']/child::option[36]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.711" endtime="20210619 09:00:55.932"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.711" endtime="20210619 09:00:55.932"></status>
+</kw>
+<kw name="${x} = 37" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:55.933" level="INFO">Clicking element '//select[@name='url']/child::option[37]'.</msg>
+<status status="PASS" starttime="20210619 09:00:55.932" endtime="20210619 09:00:56.047"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:55.932" endtime="20210619 09:00:56.047"></status>
+</kw>
+<kw name="${x} = 38" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:56.048" level="INFO">Clicking element '//select[@name='url']/child::option[38]'.</msg>
+<status status="PASS" starttime="20210619 09:00:56.047" endtime="20210619 09:00:56.109"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.047" endtime="20210619 09:00:56.110"></status>
+</kw>
+<kw name="${x} = 39" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:56.110" level="INFO">Clicking element '//select[@name='url']/child::option[39]'.</msg>
+<status status="PASS" starttime="20210619 09:00:56.110" endtime="20210619 09:00:56.215"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.110" endtime="20210619 09:00:56.215"></status>
+</kw>
+<kw name="${x} = 40" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:56.216" level="INFO">Clicking element '//select[@name='url']/child::option[40]'.</msg>
+<status status="PASS" starttime="20210619 09:00:56.215" endtime="20210619 09:00:56.323"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.215" endtime="20210619 09:00:56.323"></status>
+</kw>
+<kw name="${x} = 41" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<msg timestamp="20210619 09:00:56.324" level="INFO">Clicking element '//select[@name='url']/child::option[41]'.</msg>
+<status status="PASS" starttime="20210619 09:00:56.323" endtime="20210619 09:00:56.482"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.323" endtime="20210619 09:00:56.482"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:52.323" endtime="20210619 09:00:56.483"></status>
+</kw>
+<msg timestamp="20210619 09:00:56.483" level="INFO">${Result} = 42</msg>
+<status status="PASS" starttime="20210619 09:00:52.298" endtime="20210619 09:00:56.483"></status>
+</kw>
+<msg timestamp="20210619 09:00:56.484" level="INFO">${Result} = 42</msg>
+<status status="PASS" starttime="20210619 09:00:52.297" endtime="20210619 09:00:56.484"></status>
+</kw>
+<kw name="Then I Print only Five category" library="AmazonSD">
+<arguments>
+<arg>${Result}</arg>
+</arguments>
+<kw name="Print the first five category only" library="AmazonHomePage">
+<arguments>
+<arg>${Results}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.488" endtime="20210619 09:00:56.489"></status>
+</kw>
+<kw name="${x} IN RANGE [ 1 | ${Count} ]" type="for">
+<kw name="${x} = 1" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<assign>
+<var>${Text}</var>
+</assign>
+<msg timestamp="20210619 09:00:56.560" level="INFO">${Text} = All Categories</msg>
+<status status="PASS" starttime="20210619 09:00:56.491" endtime="20210619 09:00:56.560"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&lt;=5</arg>
+<arg>log to console</arg>
+<arg>${Text}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Text}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.562" endtime="20210619 09:00:56.563"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.561" endtime="20210619 09:00:56.563"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&gt;5</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.564" endtime="20210619 09:00:56.565"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.490" endtime="20210619 09:00:56.565"></status>
+</kw>
+<kw name="${x} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<assign>
+<var>${Text}</var>
+</assign>
+<msg timestamp="20210619 09:00:56.614" level="INFO">${Text} = Deals</msg>
+<status status="PASS" starttime="20210619 09:00:56.566" endtime="20210619 09:00:56.614"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&lt;=5</arg>
+<arg>log to console</arg>
+<arg>${Text}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Text}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.617" endtime="20210619 09:00:56.617"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.616" endtime="20210619 09:00:56.617"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&gt;5</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.617" endtime="20210619 09:00:56.617"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.565" endtime="20210619 09:00:56.617"></status>
+</kw>
+<kw name="${x} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<assign>
+<var>${Text}</var>
+</assign>
+<msg timestamp="20210619 09:00:56.661" level="INFO">${Text} = Alexa Skills</msg>
+<status status="PASS" starttime="20210619 09:00:56.617" endtime="20210619 09:00:56.661"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&lt;=5</arg>
+<arg>log to console</arg>
+<arg>${Text}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Text}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.662" endtime="20210619 09:00:56.664"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.661" endtime="20210619 09:00:56.664"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&gt;5</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.664" endtime="20210619 09:00:56.665"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.617" endtime="20210619 09:00:56.665"></status>
+</kw>
+<kw name="${x} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<assign>
+<var>${Text}</var>
+</assign>
+<msg timestamp="20210619 09:00:56.709" level="INFO">${Text} = Amazon Devices</msg>
+<status status="PASS" starttime="20210619 09:00:56.665" endtime="20210619 09:00:56.709"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&lt;=5</arg>
+<arg>log to console</arg>
+<arg>${Text}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Text}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.711" endtime="20210619 09:00:56.712"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.710" endtime="20210619 09:00:56.712"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&gt;5</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.712" endtime="20210619 09:00:56.713"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.665" endtime="20210619 09:00:56.714"></status>
+</kw>
+<kw name="${x} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<assign>
+<var>${Text}</var>
+</assign>
+<msg timestamp="20210619 09:00:56.770" level="INFO">${Text} = Amazon Fashion</msg>
+<status status="PASS" starttime="20210619 09:00:56.714" endtime="20210619 09:00:56.770"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&lt;=5</arg>
+<arg>log to console</arg>
+<arg>${Text}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Text}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.772" endtime="20210619 09:00:56.780"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.770" endtime="20210619 09:00:56.780"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&gt;5</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.781" endtime="20210619 09:00:56.781"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.714" endtime="20210619 09:00:56.781"></status>
+</kw>
+<kw name="${x} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//select[@name='url']/child::option[${x}]</arg>
+</arguments>
+<assign>
+<var>${Text}</var>
+</assign>
+<msg timestamp="20210619 09:00:56.837" level="INFO">${Text} = Amazon Pantry</msg>
+<status status="PASS" starttime="20210619 09:00:56.782" endtime="20210619 09:00:56.837"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&lt;=5</arg>
+<arg>log to console</arg>
+<arg>${Text}</arg>
+</arguments>
+<status status="PASS" starttime="20210619 09:00:56.837" endtime="20210619 09:00:56.838"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}&gt;5</arg>
+</arguments>
+<msg timestamp="20210619 09:00:56.839" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210619 09:00:56.839" endtime="20210619 09:00:56.840"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.782" endtime="20210619 09:00:56.840"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.490" endtime="20210619 09:00:56.840"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.486" endtime="20210619 09:00:56.841"></status>
+</kw>
+<status status="PASS" starttime="20210619 09:00:56.485" endtime="20210619 09:00:56.841"></status>
+</kw>
+<tags>
+<tag>E2E1</tag>
+</tags>
+<status status="PASS" starttime="20210619 09:00:45.418" endtime="20210619 09:00:56.842" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210619 09:00:45.010" endtime="20210619 09:00:56.844"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">E2E1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="LoopTesting">LoopTesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

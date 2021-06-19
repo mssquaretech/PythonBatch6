@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210618 13:19:26.766" rpa="false">
+<suite id="s1" name="UKHousingFeature" source="C:\Users\nshakya\PycharmProjects\PythonAutomation\UKHousingRobot\Tests\UKHousingFeature.robot">
+<test id="s1-t1" name="Book Housing Property at University of London">
+<kw name="Given I Open the Housing Property Website of 'University of London'" library="UKHousing_StepDefination">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210618 13:19:27.189" level="INFO">Opening browser 'chrome' to base url 'https://househunt.london.ac.uk/'.</msg>
+<status status="PASS" starttime="20210618 13:19:27.188" endtime="20210618 13:19:41.644"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210618 13:19:41.644" endtime="20210618 13:19:41.768"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:27.188" endtime="20210618 13:19:41.768"></status>
+</kw>
+<kw name="When I Navigate and open the 'Find Your Property' section" library="UKHousing_StepDefination">
+<kw name="Navigate and open the 'Find Your Property' option" library="MainPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FindYourProperty}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:41.769" level="INFO">Clicking element '//a[text()='Find Your Property']'.</msg>
+<status status="PASS" starttime="20210618 13:19:41.769" endtime="20210618 13:19:41.884"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:41.769" endtime="20210618 13:19:41.884"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:41.768" endtime="20210618 13:19:41.885"></status>
+</kw>
+<kw name="And I Open the 'Search' section" library="UKHousing_StepDefination">
+<kw name="Validate New Window 'Find Your Property' Opened" library="FindYourPropertyPage">
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:19:41.887" endtime="20210618 13:19:41.897"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Find Your Property</arg>
+</arguments>
+<msg timestamp="20210618 13:19:47.043" level="INFO">Current page contains text 'Find Your Property'.</msg>
+<status status="PASS" starttime="20210618 13:19:41.897" endtime="20210618 13:19:47.043"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:41.886" endtime="20210618 13:19:47.044"></status>
+</kw>
+<kw name="Click on 'Search' option" library="FindYourPropertyPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchButton}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:47.044" level="INFO">Clicking element '//aside//descendant::a[text()='Search']'.</msg>
+<status status="PASS" starttime="20210618 13:19:47.044" endtime="20210618 13:19:49.194"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:47.044" endtime="20210618 13:19:49.194"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:41.886" endtime="20210618 13:19:49.194"></status>
+</kw>
+<kw name="And I Select the 'University' and 'Campus'" library="UKHousing_StepDefination">
+<kw name="Validate New Search Page Opened" library="PropertySearchPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Search A Property</arg>
+</arguments>
+<msg timestamp="20210618 13:19:49.229" level="INFO">Current page contains text 'Search A Property'.</msg>
+<status status="PASS" starttime="20210618 13:19:49.197" endtime="20210618 13:19:49.229"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:49.197" endtime="20210618 13:19:49.229"></status>
+</kw>
+<kw name="Select 'University' and 'Campus' from Drop Down" library="PropertySearchPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${University}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:49.230" level="INFO">Clicking element '//div[text()=' University ']'.</msg>
+<status status="PASS" starttime="20210618 13:19:49.230" endtime="20210618 13:19:49.314"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${RAM}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:19:49.315" endtime="20210618 13:19:50.599"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${RAM}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:50.600" level="INFO">Clicking element '//span[contains(text(),'RAM')]'.</msg>
+<status status="PASS" starttime="20210618 13:19:50.599" endtime="20210618 13:19:50.662"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Campus}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:50.662" level="INFO">Clicking element '//div[text()=' Campus ']'.</msg>
+<status status="PASS" starttime="20210618 13:19:50.662" endtime="20210618 13:19:50.725"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MainCampus}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:19:50.726" endtime="20210618 13:19:50.754"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MainCampus}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:50.756" level="INFO">Clicking element '//span[text()='Main Campus']'.</msg>
+<status status="PASS" starttime="20210618 13:19:50.755" endtime="20210618 13:19:50.808"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:49.230" endtime="20210618 13:19:50.808"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:49.196" endtime="20210618 13:19:50.808"></status>
+</kw>
+<kw name="And I Search the Property" library="UKHousing_StepDefination">
+<kw name="Click on Search Button" library="PropertySearchPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20210618 13:19:50.810" level="INFO">Clicking element '//button[text()='See Results']'.</msg>
+<status status="PASS" starttime="20210618 13:19:50.809" endtime="20210618 13:19:50.888"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:50.809" endtime="20210618 13:19:50.891"></status>
+</kw>
+<kw name="Validate the result of properties display" library="PropertySearchPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Results}</arg>
+<arg>timeout=50</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:19:50.893" endtime="20210618 13:20:13.290"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:50.892" endtime="20210618 13:20:13.290"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:50.809" endtime="20210618 13:20:13.291"></status>
+</kw>
+<kw name="And I Sort the property pricing with 'Low to High'" library="UKHousing_StepDefination">
+<kw name="Click on Sorting Button" library="PropertySearchPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SortingButton}</arg>
+</arguments>
+<msg timestamp="20210618 13:20:13.293" level="INFO">Clicking element '//span[text()='Default']'.</msg>
+<status status="PASS" starttime="20210618 13:20:13.292" endtime="20210618 13:20:13.588"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:13.292" endtime="20210618 13:20:13.589"></status>
+</kw>
+<kw name="Select the Price: Low to High" library="PropertySearchPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Pricing}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:13.589" endtime="20210618 13:20:13.655"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Pricing}</arg>
+</arguments>
+<msg timestamp="20210618 13:20:13.656" level="INFO">Clicking element '//span[text()='Price: Low to High']'.</msg>
+<status status="PASS" starttime="20210618 13:20:13.655" endtime="20210618 13:20:13.756"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:13.589" endtime="20210618 13:20:13.756"></status>
+</kw>
+<kw name="Wait till new Property List display" library="PropertySearchPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${AfterRefresh}</arg>
+<arg>timeout=50</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:13.757" endtime="20210618 13:20:28.254"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:13.757" endtime="20210618 13:20:28.254"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:13.291" endtime="20210618 13:20:28.255"></status>
+</kw>
+<kw name="Then I Capture and print the names of first 5 Properties" library="UKHousing_StepDefination">
+<kw name="Capture the total Properties Display and Initiate Loop to display Properties" library="PropertySearchPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${TotalProperty}</arg>
+</arguments>
+<assign>
+<var>${TotalCount}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.296" level="INFO">${TotalCount} = 50</msg>
+<status status="PASS" starttime="20210618 13:20:28.258" endtime="20210618 13:20:28.296"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.297" endtime="20210618 13:20:28.297"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Top 5 Properties are:</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.298" endtime="20210618 13:20:28.298"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.299" level="INFO">${x} = 1</msg>
+<status status="PASS" starttime="20210618 13:20:28.298" endtime="20210618 13:20:28.299"></status>
+</kw>
+<kw name="${a} IN RANGE [ 1 | ${TotalCount} ]" type="for">
+<kw name="${a} = 1" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.365" level="INFO">${PropertyText} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210618 13:20:28.300" endtime="20210618 13:20:28.365"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.366" endtime="20210618 13:20:28.366"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.366" endtime="20210618 13:20:28.367"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.365" endtime="20210618 13:20:28.367"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.367" level="INFO">${x} = 3</msg>
+<status status="PASS" starttime="20210618 13:20:28.367" endtime="20210618 13:20:28.367"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.368" endtime="20210618 13:20:28.368"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.300" endtime="20210618 13:20:28.368"></status>
+</kw>
+<kw name="${a} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.414" level="INFO">${PropertyText} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210618 13:20:28.369" endtime="20210618 13:20:28.414"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.415" endtime="20210618 13:20:28.415"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.415" endtime="20210618 13:20:28.416"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.414" endtime="20210618 13:20:28.416"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.416" level="INFO">${x} = 5</msg>
+<status status="PASS" starttime="20210618 13:20:28.416" endtime="20210618 13:20:28.416"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.416" endtime="20210618 13:20:28.417"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.368" endtime="20210618 13:20:28.417"></status>
+</kw>
+<kw name="${a} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.448" level="INFO">${PropertyText} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210618 13:20:28.417" endtime="20210618 13:20:28.448"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.450" endtime="20210618 13:20:28.450"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.449" endtime="20210618 13:20:28.450"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.449" endtime="20210618 13:20:28.450"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.451" level="INFO">${x} = 7</msg>
+<status status="PASS" starttime="20210618 13:20:28.450" endtime="20210618 13:20:28.451"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.451" endtime="20210618 13:20:28.451"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.417" endtime="20210618 13:20:28.451"></status>
+</kw>
+<kw name="${a} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.484" level="INFO">${PropertyText} = Woodville House</msg>
+<status status="PASS" starttime="20210618 13:20:28.452" endtime="20210618 13:20:28.484"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.486" endtime="20210618 13:20:28.486"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.485" endtime="20210618 13:20:28.486"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.485" endtime="20210618 13:20:28.486"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.487" level="INFO">${x} = 9</msg>
+<status status="PASS" starttime="20210618 13:20:28.487" endtime="20210618 13:20:28.487"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.487" endtime="20210618 13:20:28.488"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.452" endtime="20210618 13:20:28.488"></status>
+</kw>
+<kw name="${a} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.525" level="INFO">${PropertyText} = Lancaster Grove</msg>
+<status status="PASS" starttime="20210618 13:20:28.488" endtime="20210618 13:20:28.525"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.526" endtime="20210618 13:20:28.526"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.526" endtime="20210618 13:20:28.526"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.525" endtime="20210618 13:20:28.526"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.527" level="INFO">${x} = 11</msg>
+<status status="PASS" starttime="20210618 13:20:28.527" endtime="20210618 13:20:28.527"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.527" endtime="20210618 13:20:28.528"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.488" endtime="20210618 13:20:28.528"></status>
+</kw>
+<kw name="${a} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.566" level="INFO">${PropertyText} = Elly House, - Queen's Crescent</msg>
+<status status="PASS" starttime="20210618 13:20:28.528" endtime="20210618 13:20:28.566"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.567" endtime="20210618 13:20:28.567"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.568" level="INFO">${x} = 13</msg>
+<status status="PASS" starttime="20210618 13:20:28.568" endtime="20210618 13:20:28.568"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.568" endtime="20210618 13:20:28.569"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.528" endtime="20210618 13:20:28.569"></status>
+</kw>
+<kw name="${a} = 7" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.623" level="INFO">${PropertyText} = pollard house</msg>
+<status status="PASS" starttime="20210618 13:20:28.569" endtime="20210618 13:20:28.623"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.623" endtime="20210618 13:20:28.624"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.624" level="INFO">${x} = 15</msg>
+<status status="PASS" starttime="20210618 13:20:28.624" endtime="20210618 13:20:28.624"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.624" endtime="20210618 13:20:28.625"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.569" endtime="20210618 13:20:28.625"></status>
+</kw>
+<kw name="${a} = 8" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.657" level="INFO">${PropertyText} = A Fleet Road , Hampstead</msg>
+<status status="PASS" starttime="20210618 13:20:28.626" endtime="20210618 13:20:28.657"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.657" endtime="20210618 13:20:28.657"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.658" level="INFO">${x} = 17</msg>
+<status status="PASS" starttime="20210618 13:20:28.657" endtime="20210618 13:20:28.658"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.658" endtime="20210618 13:20:28.658"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.625" endtime="20210618 13:20:28.658"></status>
+</kw>
+<kw name="${a} = 9" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.688" level="INFO">${PropertyText} = Queen Alexandra Mansions , Judd St</msg>
+<status status="PASS" starttime="20210618 13:20:28.658" endtime="20210618 13:20:28.688"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.688" endtime="20210618 13:20:28.689"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.689" level="INFO">${x} = 19</msg>
+<status status="PASS" starttime="20210618 13:20:28.689" endtime="20210618 13:20:28.689"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.689" endtime="20210618 13:20:28.690"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.658" endtime="20210618 13:20:28.690"></status>
+</kw>
+<kw name="${a} = 10" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.721" level="INFO">${PropertyText} = Brecknock Road , Camden</msg>
+<status status="PASS" starttime="20210618 13:20:28.690" endtime="20210618 13:20:28.721"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.721" endtime="20210618 13:20:28.721"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.722" level="INFO">${x} = 21</msg>
+<status status="PASS" starttime="20210618 13:20:28.721" endtime="20210618 13:20:28.722"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.722" endtime="20210618 13:20:28.722"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.690" endtime="20210618 13:20:28.722"></status>
+</kw>
+<kw name="${a} = 11" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.751" level="INFO">${PropertyText} = Crowndale Road</msg>
+<status status="PASS" starttime="20210618 13:20:28.723" endtime="20210618 13:20:28.751"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.751" endtime="20210618 13:20:28.751"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.752" level="INFO">${x} = 23</msg>
+<status status="PASS" starttime="20210618 13:20:28.751" endtime="20210618 13:20:28.752"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.752" endtime="20210618 13:20:28.753"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.722" endtime="20210618 13:20:28.753"></status>
+</kw>
+<kw name="${a} = 12" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.784" level="INFO">${PropertyText} = A Queens Crescent</msg>
+<status status="PASS" starttime="20210618 13:20:28.753" endtime="20210618 13:20:28.784"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.784" endtime="20210618 13:20:28.784"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.785" level="INFO">${x} = 25</msg>
+<status status="PASS" starttime="20210618 13:20:28.784" endtime="20210618 13:20:28.785"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.785" endtime="20210618 13:20:28.785"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.753" endtime="20210618 13:20:28.785"></status>
+</kw>
+<kw name="${a} = 13" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.815" level="INFO">${PropertyText} = Union Road</msg>
+<status status="PASS" starttime="20210618 13:20:28.786" endtime="20210618 13:20:28.815"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.815" endtime="20210618 13:20:28.816"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.816" level="INFO">${x} = 27</msg>
+<status status="PASS" starttime="20210618 13:20:28.816" endtime="20210618 13:20:28.816"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.816" endtime="20210618 13:20:28.817"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.785" endtime="20210618 13:20:28.817"></status>
+</kw>
+<kw name="${a} = 14" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.850" level="INFO">${PropertyText} = Musbury Street, Stepney Green</msg>
+<status status="PASS" starttime="20210618 13:20:28.817" endtime="20210618 13:20:28.850"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.850" endtime="20210618 13:20:28.851"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.851" level="INFO">${x} = 29</msg>
+<status status="PASS" starttime="20210618 13:20:28.851" endtime="20210618 13:20:28.851"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.851" endtime="20210618 13:20:28.852"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.817" endtime="20210618 13:20:28.852"></status>
+</kw>
+<kw name="${a} = 15" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.881" level="INFO">${PropertyText} = High Street Hornsey</msg>
+<status status="PASS" starttime="20210618 13:20:28.852" endtime="20210618 13:20:28.881"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.881" endtime="20210618 13:20:28.881"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.882" level="INFO">${x} = 31</msg>
+<status status="PASS" starttime="20210618 13:20:28.881" endtime="20210618 13:20:28.882"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.882" endtime="20210618 13:20:28.882"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.852" endtime="20210618 13:20:28.882"></status>
+</kw>
+<kw name="${a} = 16" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.932" level="INFO">${PropertyText} = High Street Hornsey</msg>
+<status status="PASS" starttime="20210618 13:20:28.883" endtime="20210618 13:20:28.932"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.932" endtime="20210618 13:20:28.933"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.933" level="INFO">${x} = 33</msg>
+<status status="PASS" starttime="20210618 13:20:28.933" endtime="20210618 13:20:28.933"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.933" endtime="20210618 13:20:28.934"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.882" endtime="20210618 13:20:28.934"></status>
+</kw>
+<kw name="${a} = 17" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.962" level="INFO">${PropertyText} = High Street Hornsey</msg>
+<status status="PASS" starttime="20210618 13:20:28.934" endtime="20210618 13:20:28.962"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.962" endtime="20210618 13:20:28.963"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.963" level="INFO">${x} = 35</msg>
+<status status="PASS" starttime="20210618 13:20:28.963" endtime="20210618 13:20:28.964"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.964" endtime="20210618 13:20:28.964"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.934" endtime="20210618 13:20:28.964"></status>
+</kw>
+<kw name="${a} = 18" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.992" level="INFO">${PropertyText} = OLD FORD ROAD , Black Katz Baron Street London N ES</msg>
+<status status="PASS" starttime="20210618 13:20:28.964" endtime="20210618 13:20:28.992"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.992" endtime="20210618 13:20:28.993"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:28.993" level="INFO">${x} = 37</msg>
+<status status="PASS" starttime="20210618 13:20:28.993" endtime="20210618 13:20:28.993"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:28.993" endtime="20210618 13:20:28.994"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.964" endtime="20210618 13:20:28.994"></status>
+</kw>
+<kw name="${a} = 19" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.024" level="INFO">${PropertyText} = OLD FORD ROAD , Blackkatz Baron Street London N ES</msg>
+<status status="PASS" starttime="20210618 13:20:28.994" endtime="20210618 13:20:29.024"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.025" endtime="20210618 13:20:29.025"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.025" level="INFO">${x} = 39</msg>
+<status status="PASS" starttime="20210618 13:20:29.025" endtime="20210618 13:20:29.025"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.025" endtime="20210618 13:20:29.026"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.994" endtime="20210618 13:20:29.026"></status>
+</kw>
+<kw name="${a} = 20" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.058" level="INFO">${PropertyText} = BREWHOUSE WALK</msg>
+<status status="PASS" starttime="20210618 13:20:29.026" endtime="20210618 13:20:29.058"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.058" endtime="20210618 13:20:29.058"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.059" level="INFO">${x} = 41</msg>
+<status status="PASS" starttime="20210618 13:20:29.058" endtime="20210618 13:20:29.059"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.059" endtime="20210618 13:20:29.059"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:29.026" endtime="20210618 13:20:29.059"></status>
+</kw>
+<kw name="${a} = 21" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.090" level="INFO">${PropertyText} = Glasshouse Walk , Black Katz Borough High Street London Bridg</msg>
+<status status="PASS" starttime="20210618 13:20:29.059" endtime="20210618 13:20:29.090"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.090" endtime="20210618 13:20:29.091"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.091" level="INFO">${x} = 43</msg>
+<status status="PASS" starttime="20210618 13:20:29.091" endtime="20210618 13:20:29.091"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.091" endtime="20210618 13:20:29.092"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:29.059" endtime="20210618 13:20:29.092"></status>
+</kw>
+<kw name="${a} = 22" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.121" level="INFO">${PropertyText} = Fleetway, Birkenhead Street , Black Katz Baron Street London N ES</msg>
+<status status="PASS" starttime="20210618 13:20:29.092" endtime="20210618 13:20:29.121"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.121" endtime="20210618 13:20:29.121"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.122" level="INFO">${x} = 45</msg>
+<status status="PASS" starttime="20210618 13:20:29.121" endtime="20210618 13:20:29.122"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.122" endtime="20210618 13:20:29.122"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:29.092" endtime="20210618 13:20:29.122"></status>
+</kw>
+<kw name="${a} = 23" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.153" level="INFO">${PropertyText} = Olney Road</msg>
+<status status="PASS" starttime="20210618 13:20:29.122" endtime="20210618 13:20:29.153"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.153" endtime="20210618 13:20:29.153"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.154" level="INFO">${x} = 47</msg>
+<status status="PASS" starttime="20210618 13:20:29.153" endtime="20210618 13:20:29.154"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.154" endtime="20210618 13:20:29.154"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:29.122" endtime="20210618 13:20:29.154"></status>
+</kw>
+<kw name="${a} = 24" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.182" level="INFO">${PropertyText} = Law Street , Black Katz Borough High Street London Bridg</msg>
+<status status="PASS" starttime="20210618 13:20:29.154" endtime="20210618 13:20:29.182"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.182" endtime="20210618 13:20:29.183"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.183" level="INFO">${x} = 49</msg>
+<status status="PASS" starttime="20210618 13:20:29.183" endtime="20210618 13:20:29.183"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.183" endtime="20210618 13:20:29.184"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:29.154" endtime="20210618 13:20:29.184"></status>
+</kw>
+<kw name="${a} = 25" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TextXpath}${x}${CloseXpath}</arg>
+</arguments>
+<assign>
+<var>${PropertyText}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.212" level="INFO">${PropertyText} = Edenvale Road</msg>
+<status status="PASS" starttime="20210618 13:20:29.184" endtime="20210618 13:20:29.212"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${a}&lt;=5</arg>
+<arg>Run Keyword If</arg>
+<arg>${x}%2!=0</arg>
+<arg>log to console</arg>
+<arg>${PropertyText}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 13:20:29.213" endtime="20210618 13:20:29.213"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${x} + 2</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210618 13:20:29.213" level="INFO">${x} = 51</msg>
+<status status="PASS" starttime="20210618 13:20:29.213" endtime="20210618 13:20:29.213"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${x}==${TotalCount}+1</arg>
+</arguments>
+<msg timestamp="20210618 13:20:29.214" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210618 13:20:29.213" endtime="20210618 13:20:29.214"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:29.184" endtime="20210618 13:20:29.214"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.299" endtime="20210618 13:20:29.214"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.258" endtime="20210618 13:20:29.214"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:20:28.257" endtime="20210618 13:20:29.214"></status>
+</kw>
+<status status="PASS" starttime="20210618 13:19:27.187" endtime="20210618 13:20:29.215" critical="yes"></status>
+</test>
+<doc>Robot Framework test suite to get the Housing Property at University of London</doc>
+<status status="PASS" starttime="20210618 13:19:26.768" endtime="20210618 13:20:29.217"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="UKHousingFeature">UKHousingFeature</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
