@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.4 on win32)" generated="20210614 21:36:35.681" rpa="false">
+<suite id="s1" name="Yatra" source="C:\Users\garimasi\PycharmProjects\Robotyatra\Test\Yatra.robot">
+<test id="s1-t1" name="TestingYatra to book Ticket">
+<kw name="Given I navigate to &quot;https://yatra.com&quot; in webbrowser &quot;chrome&quot;" library="YatraSD">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210614 21:36:36.332" level="INFO">Opening browser 'chrome' to base url 'https://yatra.com'.</msg>
+<status status="PASS" starttime="20210614 21:36:36.332" endtime="20210614 21:36:50.125"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210614 21:36:50.126" endtime="20210614 21:36:50.462"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210614 21:36:53.464" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210614 21:36:50.462" endtime="20210614 21:36:53.464"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:36:36.332" endtime="20210614 21:36:53.464"></status>
+</kw>
+<kw name="When I select round trip" library="YatraSD">
+<kw name="SelectRoundTrip" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${roundtrip}</arg>
+</arguments>
+<msg timestamp="20210614 21:36:53.464" level="INFO">Clicking element '//a[@title='Round Trip']'.</msg>
+<status status="PASS" starttime="20210614 21:36:53.464" endtime="20210614 21:36:53.633"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210614 21:36:55.643" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 21:36:53.633" endtime="20210614 21:36:55.643"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:36:53.464" endtime="20210614 21:36:55.644"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:36:53.464" endtime="20210614 21:36:55.644"></status>
+</kw>
+<kw name="And I select City of Depature and Arrival" library="YatraSD">
+<kw name="Select Dept City" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FromCity}</arg>
+</arguments>
+<msg timestamp="20210614 21:36:55.645" level="INFO">Clicking element 'BE_flight_origin_city'.</msg>
+<status status="PASS" starttime="20210614 21:36:55.645" endtime="20210614 21:36:55.767"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210614 21:36:57.775" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 21:36:55.768" endtime="20210614 21:36:57.775"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FromCityElement}</arg>
+</arguments>
+<msg timestamp="20210614 21:36:57.775" level="INFO">Clicking element '//p[contains(text(),'New Delhi')]'.</msg>
+<status status="PASS" starttime="20210614 21:36:57.775" endtime="20210614 21:36:57.895"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:36:55.645" endtime="20210614 21:36:57.896"></status>
+</kw>
+<kw name="Select Arrival City" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ToCity}</arg>
+</arguments>
+<msg timestamp="20210614 21:36:57.899" level="INFO">Clicking element 'BE_flight_arrival_city'.</msg>
+<status status="PASS" starttime="20210614 21:36:57.898" endtime="20210614 21:36:58.066"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210614 21:37:00.073" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 21:36:58.066" endtime="20210614 21:37:00.073"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ToCityElement}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:00.074" level="INFO">Clicking element '//p[contains(text(),'Mumbai')]'.</msg>
+<status status="PASS" starttime="20210614 21:37:00.073" endtime="20210614 21:37:00.170"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:36:57.896" endtime="20210614 21:37:00.170"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:36:55.645" endtime="20210614 21:37:00.170"></status>
+</kw>
+<kw name="And I select Depature and Return dates" library="YatraSD">
+<kw name="Select Depature Date" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DeptCal}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:00.173" level="INFO">Clicking element '//input[@id='BE_flight_origin_date']'.</msg>
+<status status="PASS" starttime="20210614 21:37:00.173" endtime="20210614 21:37:00.298"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210614 21:37:02.301" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 21:37:00.299" endtime="20210614 21:37:02.301"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DepDate}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:02.301" level="INFO">Clicking element '//td[@data-date='25/06/2021']'.</msg>
+<status status="PASS" starttime="20210614 21:37:02.301" endtime="20210614 21:37:02.448"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:00.171" endtime="20210614 21:37:02.448"></status>
+</kw>
+<kw name="Select Return Date" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ArrCal}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:02.449" level="INFO">Clicking element '//input[@id='BE_flight_arrival_date']'.</msg>
+<status status="PASS" starttime="20210614 21:37:02.449" endtime="20210614 21:37:02.561"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210614 21:37:04.565" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 21:37:02.561" endtime="20210614 21:37:04.565"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ArrDate}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:04.567" level="INFO">Clicking element '//td[@data-date='26/06/2021']'.</msg>
+<status status="PASS" starttime="20210614 21:37:04.566" endtime="20210614 21:37:04.676"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:02.448" endtime="20210614 21:37:04.676"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:00.171" endtime="20210614 21:37:04.676"></status>
+</kw>
+<kw name="And I select number of Travellers" library="YatraSD">
+<kw name="Select 1 Adult" library="YatraPage">
+<kw name="Expand Traveller Economy" library="YatraAdhoc">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Expand Traveller Economy}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:04.680" level="INFO">Clicking element '//i[contains(@class,'arrowpassengerBox')]'.</msg>
+<status status="PASS" starttime="20210614 21:37:04.680" endtime="20210614 21:37:04.811"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210614 21:37:05.814" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 21:37:04.811" endtime="20210614 21:37:05.815"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:04.679" endtime="20210614 21:37:05.815"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${AdultCheckbox}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:05.816" level="INFO">Clicking element '//span[contains(text(),'Adult')]/../following-sibling::div//span[@class='ddSpinnerPlus']'.</msg>
+<status status="PASS" starttime="20210614 21:37:05.815" endtime="20210614 21:37:05.913"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:04.678" endtime="20210614 21:37:05.914"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:04.677" endtime="20210614 21:37:05.914"></status>
+</kw>
+<kw name="And I select economy class" library="YatraSD">
+<kw name="Check Econoy class" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${EconomyClass}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:05.915" level="INFO">Clicking element '//span[text()='Economy']/..'.</msg>
+<status status="PASS" starttime="20210614 21:37:05.915" endtime="20210614 21:37:06.024"></status>
+</kw>
+<kw name="Expand Traveller Economy" library="YatraAdhoc">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Expand Traveller Economy}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:06.025" level="INFO">Clicking element '//i[contains(@class,'arrowpassengerBox')]'.</msg>
+<status status="PASS" starttime="20210614 21:37:06.024" endtime="20210614 21:37:06.097"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210614 21:37:07.106" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 21:37:06.098" endtime="20210614 21:37:07.106"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:06.024" endtime="20210614 21:37:07.106"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:05.915" endtime="20210614 21:37:07.106"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:05.914" endtime="20210614 21:37:07.107"></status>
+</kw>
+<kw name="And I select NonStop Flights" library="YatraSD">
+<kw name="Check NonStopFlights" library="YatraPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NonStopFlight}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:07.107" level="INFO">Clicking element '//a[@title='Non Stop Flights']/i'.</msg>
+<status status="PASS" starttime="20210614 21:37:07.107" endtime="20210614 21:37:07.210"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:07.107" endtime="20210614 21:37:07.212"></status>
+</kw>
+<status status="PASS" starttime="20210614 21:37:07.107" endtime="20210614 21:37:07.212"></status>
+</kw>
+<kw name="And I click on Search Button" library="YatraSD">
+<kw name="Click on Search Button" library="YatraPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchButton}</arg>
+</arguments>
+<msg timestamp="20210614 21:37:07.215" level="INFO">Clicking button 'BE_flight_flsearch_btn'.</msg>
+<status status="PASS" starttime="20210614 21:37:07.214" endtime="20210614 21:37:10.315"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" starttime="20210614 21:37:13.162" endtime="20210614 21:37:13.162"></status>
+</kw>
+<msg timestamp="20210614 21:37:13.162" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20210614 21:37:10.316" endtime="20210614 21:37:13.164"></status>
+</kw>
+<status status="FAIL" starttime="20210614 21:37:07.213" endtime="20210614 21:37:13.164"></status>
+</kw>
+<status status="FAIL" starttime="20210614 21:37:07.213" endtime="20210614 21:37:13.164"></status>
+</kw>
+<status status="FAIL" starttime="20210614 21:36:36.330" endtime="20210614 21:37:13.165" critical="yes">Execution terminated by signal</status>
+</test>
+<status status="FAIL" starttime="20210614 21:36:35.685" endtime="20210614 21:37:13.167"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Yatra">Yatra</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210614 21:37:13.162" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>

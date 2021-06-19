@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.4 on win32)" generated="20210616 08:48:57.096" rpa="false">
+<suite id="s1" name="UOL" source="C:\Users\garimasi\PycharmProjects\UOLRobot\Test\UOL.robot">
+<test id="s1-t1" name="Test househunt.london.ac.uk to Get List of Properties">
+<kw name="Given I Navigate to househunt webPage" library="UOLSD">
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210616 08:48:57.317" level="INFO">Opening browser 'chrome' to base url 'https://househunt.london.ac.uk/'.</msg>
+<status status="PASS" starttime="20210616 08:48:57.317" endtime="20210616 08:49:09.432"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210616 08:49:09.432" endtime="20210616 08:49:09.559"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210616 08:49:10.254" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-75.png"&gt;&lt;img src="selenium-screenshot-75.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210616 08:49:09.559" endtime="20210616 08:49:10.255"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:48:57.316" endtime="20210616 08:49:10.255"></status>
+</kw>
+<kw name="When I click on Find Your Property" library="UOLSD">
+<kw name="Click on Menu &quot;find-your-property&quot;" library="UOLHomePages">
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${FindPropertymenu}</arg>
+<arg>&lt;Menu&gt;</arg>
+<arg>${Value}</arg>
+</arguments>
+<assign>
+<var>${FindPropertymenu}</var>
+</assign>
+<msg timestamp="20210616 08:49:10.257" level="INFO">${FindPropertymenu} = //a[contains(@href,'find-your-property')]</msg>
+<status status="PASS" starttime="20210616 08:49:10.256" endtime="20210616 08:49:10.257"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FindPropertymenu}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:10.257" level="INFO">Clicking element '//a[contains(@href,'find-your-property')]'.</msg>
+<status status="PASS" starttime="20210616 08:49:10.257" endtime="20210616 08:49:10.348"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:10.256" endtime="20210616 08:49:10.348"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:10.255" endtime="20210616 08:49:10.348"></status>
+</kw>
+<kw name="When I see a new page launched" library="UOLSD">
+<kw name="Switch to new Tab" library="UOLHomePages">
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>new</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:10.350" endtime="20210616 08:49:10.362"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Pagetitle}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:20.134" level="INFO">Current page contains element '//h1[text()='Find Your Property']'.</msg>
+<status status="PASS" starttime="20210616 08:49:10.362" endtime="20210616 08:49:20.134"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210616 08:49:20.451" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-76.png"&gt;&lt;img src="selenium-screenshot-76.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210616 08:49:20.134" endtime="20210616 08:49:20.451"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:10.350" endtime="20210616 08:49:20.451"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:10.349" endtime="20210616 08:49:20.451"></status>
+</kw>
+<kw name="And I Search My Properties" library="UOLSD">
+<kw name="Select Serch from Menu" library="UOLHomePages">
+<kw name="Click on Search Menu from list" library="UOLSearchPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SearchTab}</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:20.453" endtime="20210616 08:49:20.482"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchTab}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:20.482" level="INFO">Clicking element '(//ul[@class='menu']/li[1]/a[text()='Search'])[2]'.</msg>
+<status status="PASS" starttime="20210616 08:49:20.482" endtime="20210616 08:49:23.115"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${UniversityDropdown}</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:23.115" endtime="20210616 08:49:23.140"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:20.453" endtime="20210616 08:49:23.140"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:20.452" endtime="20210616 08:49:23.140"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:20.452" endtime="20210616 08:49:23.140"></status>
+</kw>
+<kw name="And UOL page Navigates to Search filter page" library="UOLSD">
+<kw name="Page contains filters" library="UOLSearchPage">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${UniversityDropdown}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:23.148" level="INFO">Current page contains element '//form//div[@class='col-lg-2 col-md-4']'.</msg>
+<status status="PASS" starttime="20210616 08:49:23.141" endtime="20210616 08:49:23.148"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${CampusDropdown}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:23.159" level="INFO">Current page contains element '//div[contains(text(),'Campus')]'.</msg>
+<status status="PASS" starttime="20210616 08:49:23.148" endtime="20210616 08:49:23.159"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:23.141" endtime="20210616 08:49:23.159"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:23.141" endtime="20210616 08:49:23.159"></status>
+</kw>
+<kw name="And I apply search filters and click on Search" library="UOLSD">
+<arguments>
+<arg>${University}</arg>
+</arguments>
+<kw name="Select filters &quot;${University}&quot;" library="UOLSearchPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${UniversityDropdown}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:23.161" level="INFO">Clicking element '//form//div[@class='col-lg-2 col-md-4']'.</msg>
+<status status="PASS" starttime="20210616 08:49:23.161" endtime="20210616 08:49:23.222"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ListUniversityDD}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:23.223" endtime="20210616 08:49:23.253"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ListUniversityDD}</arg>
+<arg>${University}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:23.254" level="INFO">Typing text 'Royal Academy of Music' into text field '//input[@autocomplete='off']'.</msg>
+<status status="PASS" starttime="20210616 08:49:23.253" endtime="20210616 08:49:23.381"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${RequiredUni}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:23.381" endtime="20210616 08:49:24.019"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${RequiredUni}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:24.020" level="INFO">Clicking element '//span[contains(text(),'Royal Academy of Music (RAM)')]'.</msg>
+<status status="PASS" starttime="20210616 08:49:24.020" endtime="20210616 08:49:24.063"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CampusDropdown}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:24.063" level="INFO">Clicking element '//div[contains(text(),'Campus')]'.</msg>
+<status status="PASS" starttime="20210616 08:49:24.063" endtime="20210616 08:49:24.109"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MainCampus}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:24.110" level="INFO">Clicking element '//span[contains(text(),'Main Campus')]'.</msg>
+<status status="PASS" starttime="20210616 08:49:24.110" endtime="20210616 08:49:24.160"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:23.160" endtime="20210616 08:49:24.160"></status>
+</kw>
+<kw name="Click on search" library="UOLSearchPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BtnSeeResults}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:24.161" level="INFO">Clicking element '//button[contains(text(),'See Results')]'.</msg>
+<status status="PASS" starttime="20210616 08:49:24.161" endtime="20210616 08:49:24.220"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Numofresult}</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:24.220" endtime="20210616 08:49:38.228"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:24.161" endtime="20210616 08:49:38.228"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:23.160" endtime="20210616 08:49:38.228"></status>
+</kw>
+<kw name="Then I see the list of properties" library="UOLSD">
+<kw name="List of properties returned" library="UOLSearchPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FilterOption}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:38.229" level="INFO">Clicking element '//span[text()='Default']'.</msg>
+<status status="PASS" starttime="20210616 08:49:38.229" endtime="20210616 08:49:38.505"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${OptnLowtoHigh}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:38.505" level="INFO">Clicking element '//span[text()='Price: Low to High']'.</msg>
+<status status="PASS" starttime="20210616 08:49:38.505" endtime="20210616 08:49:38.661"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${stableSearchbtn}</arg>
+<arg>timeout=40</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:38.662" endtime="20210616 08:49:54.552"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210616 08:49:55.048" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-77.png"&gt;&lt;img src="selenium-screenshot-77.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210616 08:49:54.552" endtime="20210616 08:49:55.048"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:38.229" endtime="20210616 08:49:55.049"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:38.228" endtime="20210616 08:49:55.049"></status>
+</kw>
+<kw name="And I Print &quot;5&quot; from the list" library="UOLSD">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210616 08:49:55.328" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-78.png"&gt;&lt;img src="selenium-screenshot-78.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210616 08:49:55.050" endtime="20210616 08:49:55.328"></status>
+</kw>
+<kw name="print list &quot;${Number}&quot; of Properties" library="UOLSearchPage">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${ListPropertyXpath}</arg>
+</arguments>
+<assign>
+<var>@{ListOfproperties}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.342" level="INFO">@{ListOfproperties} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="5a39e8ffefee2b59820572b0ef916424", element="7d35b6d1-f932-40ea-8330-5a929ee6204e")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210616 08:49:55.328" endtime="20210616 08:49:55.342"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${ListPropertyXpath}</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.352" level="INFO">${count} = 25</msg>
+<status status="PASS" starttime="20210616 08:49:55.342" endtime="20210616 08:49:55.352"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${count}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.352" endtime="20210616 08:49:55.353"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${i}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.353" level="INFO">${i} = 1</msg>
+<status status="PASS" starttime="20210616 08:49:55.353" endtime="20210616 08:49:55.353"></status>
+</kw>
+<kw name="${Property} IN [ @{ListOfproperties} ]" type="for">
+<kw name="${Property} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;5a39e8ffefee2b59820572b0ef916424&quot;, element=&quot;7d35b6d1-f932-40ea-8330-5a929ee6204e&quot;)&gt;" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&gt;${Number}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.354" endtime="20210616 08:49:55.354"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Property}</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.366" level="INFO">${Title} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210616 08:49:55.354" endtime="20210616 08:49:55.366"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.367" endtime="20210616 08:49:55.367"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${i}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.368" level="INFO">${i} = 2</msg>
+<status status="PASS" starttime="20210616 08:49:55.367" endtime="20210616 08:49:55.368"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.354" endtime="20210616 08:49:55.368"></status>
+</kw>
+<kw name="${Property} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;5a39e8ffefee2b59820572b0ef916424&quot;, element=&quot;5ccd156e-a02f-4309-9a0f-6beb7a8a80ba&quot;)&gt;" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&gt;${Number}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.368" endtime="20210616 08:49:55.368"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Property}</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.381" level="INFO">${Title} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210616 08:49:55.368" endtime="20210616 08:49:55.381"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.381" endtime="20210616 08:49:55.382"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${i}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.382" level="INFO">${i} = 3</msg>
+<status status="PASS" starttime="20210616 08:49:55.382" endtime="20210616 08:49:55.382"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.368" endtime="20210616 08:49:55.382"></status>
+</kw>
+<kw name="${Property} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;5a39e8ffefee2b59820572b0ef916424&quot;, element=&quot;b8564b39-979d-4753-b461-c25b12e9594e&quot;)&gt;" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&gt;${Number}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.383" endtime="20210616 08:49:55.383"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Property}</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.408" level="INFO">${Title} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210616 08:49:55.383" endtime="20210616 08:49:55.408"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.408" endtime="20210616 08:49:55.409"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${i}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.410" level="INFO">${i} = 4</msg>
+<status status="PASS" starttime="20210616 08:49:55.409" endtime="20210616 08:49:55.410"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.382" endtime="20210616 08:49:55.410"></status>
+</kw>
+<kw name="${Property} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;5a39e8ffefee2b59820572b0ef916424&quot;, element=&quot;b286502a-94ec-4ef2-bba8-8812d4ac7e68&quot;)&gt;" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&gt;${Number}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.410" endtime="20210616 08:49:55.410"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Property}</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.441" level="INFO">${Title} = Woodville House</msg>
+<status status="PASS" starttime="20210616 08:49:55.411" endtime="20210616 08:49:55.441"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.442" endtime="20210616 08:49:55.443"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${i}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.444" level="INFO">${i} = 5</msg>
+<status status="PASS" starttime="20210616 08:49:55.443" endtime="20210616 08:49:55.444"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.410" endtime="20210616 08:49:55.444"></status>
+</kw>
+<kw name="${Property} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;5a39e8ffefee2b59820572b0ef916424&quot;, element=&quot;92749935-a38e-4ee5-84ee-d62249e33ba7&quot;)&gt;" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&gt;${Number}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.444" endtime="20210616 08:49:55.444"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Property}</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.472" level="INFO">${Title} = Lancaster Grove</msg>
+<status status="PASS" starttime="20210616 08:49:55.444" endtime="20210616 08:49:55.472"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.472" endtime="20210616 08:49:55.472"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${i} + 1</arg>
+</arguments>
+<assign>
+<var>${i}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.473" level="INFO">${i} = 6</msg>
+<status status="PASS" starttime="20210616 08:49:55.472" endtime="20210616 08:49:55.473"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.444" endtime="20210616 08:49:55.473"></status>
+</kw>
+<kw name="${Property} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;5a39e8ffefee2b59820572b0ef916424&quot;, element=&quot;26c199d6-c104-4bb3-8dec-8c98a98fbe16&quot;)&gt;" type="foritem">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}&gt;${Number}</arg>
+</arguments>
+<msg timestamp="20210616 08:49:55.473" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210616 08:49:55.473" endtime="20210616 08:49:55.474"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.473" endtime="20210616 08:49:55.474"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.353" endtime="20210616 08:49:55.474"></status>
+</kw>
+<kw name="${X} IN RANGE [ 1 | ${Number} ]" type="for">
+<kw name="${X} = 1" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${ListPropertyXpath})[${X}]</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.495" level="INFO">${Title} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210616 08:49:55.474" endtime="20210616 08:49:55.495"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.495" endtime="20210616 08:49:55.496"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.474" endtime="20210616 08:49:55.496"></status>
+</kw>
+<kw name="${X} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${ListPropertyXpath})[${X}]</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.514" level="INFO">${Title} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210616 08:49:55.496" endtime="20210616 08:49:55.514"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.514" endtime="20210616 08:49:55.514"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.496" endtime="20210616 08:49:55.515"></status>
+</kw>
+<kw name="${X} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${ListPropertyXpath})[${X}]</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.532" level="INFO">${Title} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210616 08:49:55.515" endtime="20210616 08:49:55.532"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.532" endtime="20210616 08:49:55.533"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.515" endtime="20210616 08:49:55.533"></status>
+</kw>
+<kw name="${X} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${ListPropertyXpath})[${X}]</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210616 08:49:55.550" level="INFO">${Title} = Woodville House</msg>
+<status status="PASS" starttime="20210616 08:49:55.533" endtime="20210616 08:49:55.550"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<status status="PASS" starttime="20210616 08:49:55.550" endtime="20210616 08:49:55.550"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.533" endtime="20210616 08:49:55.550"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.474" endtime="20210616 08:49:55.550"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.328" endtime="20210616 08:49:55.551"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:49:55.049" endtime="20210616 08:49:55.551"></status>
+</kw>
+<status status="PASS" starttime="20210616 08:48:57.316" endtime="20210616 08:49:55.551" critical="yes"></status>
+</test>
+<doc>this is to get list of properties from househunt.london.ac.uk</doc>
+<status status="PASS" starttime="20210616 08:48:57.098" endtime="20210616 08:49:55.552"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="UOL">UOL</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
