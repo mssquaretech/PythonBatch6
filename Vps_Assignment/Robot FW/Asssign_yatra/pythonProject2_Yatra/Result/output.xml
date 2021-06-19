@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.2 on win32)" generated="20210614 15:57:29.433" rpa="false" schemaversion="2">
+<suite id="s1" name="Yatra11June" source="C:\Users\vikrampr\PycharmProjects\pythonProject2_Yatra\Test\Yatra11June.robot">
+<test id="s1-t1" name="Validate Yatra">
+<kw name="Given I navigate to Yatra.com" library="YatraSD">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.yatra.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210614 15:57:30.259" level="INFO">Opening browser 'chrome' to base url 'http://www.yatra.com'.</msg>
+<status status="PASS" starttime="20210614 15:57:30.258" endtime="20210614 15:57:40.927"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210614 15:57:40.927" endtime="20210614 15:57:41.293"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:30.256" endtime="20210614 15:57:41.294"/>
+</kw>
+<kw name="When I click on Round Trip" library="YatraSD">
+<kw name="click on Round Trip" library="YatraHomepage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RoundTrip}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:41.311" level="INFO">Clicking element '//a[@title='Round Trip']'.</msg>
+<status status="PASS" starttime="20210614 15:57:41.309" endtime="20210614 15:57:42.529"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:41.308" endtime="20210614 15:57:42.529"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:41.306" endtime="20210614 15:57:42.530"/>
+</kw>
+<kw name="Then I Enter the Depart City" library="YatraSD">
+<kw name="Enter Dcity" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:43.533" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:42.532" endtime="20210614 15:57:43.533"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DepartCity}</arg>
+<arg>Delhi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:43.533" level="INFO">Typing text 'Delhi' into text field '//input[@name='flight_origin' and @id='BE_flight_origin_city']'.</msg>
+<status status="PASS" starttime="20210614 15:57:43.533" endtime="20210614 15:57:43.762"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:42.531" endtime="20210614 15:57:43.762"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:42.530" endtime="20210614 15:57:43.763"/>
+</kw>
+<kw name="And I get Some Suggestion" library="YatraSD">
+<kw name="check some Suggestion" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:45.766" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 15:57:43.765" endtime="20210614 15:57:45.766"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DcityDropdownResult}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:45.766" level="INFO">Clicking element '//p[@class='ac_cityname']/span[text()='(DEL)']'.</msg>
+<status status="PASS" starttime="20210614 15:57:45.766" endtime="20210614 15:57:45.840"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:43.764" endtime="20210614 15:57:45.840"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:43.764" endtime="20210614 15:57:45.841"/>
+</kw>
+<kw name="Then I Click on Going To Form City" library="YatraSD">
+<kw name="Enter the Gcity" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:47.845" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210614 15:57:45.842" endtime="20210614 15:57:47.845"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${GoingCity}</arg>
+<arg>Mumbai</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:47.845" level="INFO">Typing text 'Mumbai' into text field '//input[@name='flight_destination' and @id='BE_flight_arrival_city']'.</msg>
+<status status="PASS" starttime="20210614 15:57:47.845" endtime="20210614 15:57:47.925"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:45.842" endtime="20210614 15:57:47.926"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:45.841" endtime="20210614 15:57:47.926"/>
+</kw>
+<kw name="And I Validate the Going option" library="YatraSD">
+<kw name="Validate the First Suggestion" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:48.930" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:47.927" endtime="20210614 15:57:48.930"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GcityDropdownResult}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:48.930" level="INFO">Clicking element '//strong[text()='Mumbai']'.</msg>
+<status status="PASS" starttime="20210614 15:57:48.930" endtime="20210614 15:57:49.017"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:47.927" endtime="20210614 15:57:49.017"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:47.926" endtime="20210614 15:57:49.017"/>
+</kw>
+<kw name="Then I Check the Depart Date" library="YatraSD">
+<kw name="Click on Depart Date" library="YatraHomepage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DepartDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:49.022" level="INFO">Clicking element '//input[@name='flight_origin_date' and @id='BE_flight_origin_date']'.</msg>
+<status status="PASS" starttime="20210614 15:57:49.021" endtime="20210614 15:57:49.115"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:49.019" endtime="20210614 15:57:49.116"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:49.018" endtime="20210614 15:57:49.116"/>
+</kw>
+<kw name="And I Select the Depart Date" library="YatraSD">
+<kw name="Select the Date" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:50.119" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:49.117" endtime="20210614 15:57:50.119"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DepartDresult}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:50.119" level="INFO">Clicking element '//td[@data-date='24/06/2021']'.</msg>
+<status status="PASS" starttime="20210614 15:57:50.119" endtime="20210614 15:57:50.229"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:49.116" endtime="20210614 15:57:50.229"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:49.116" endtime="20210614 15:57:50.229"/>
+</kw>
+<kw name="Then I Check the Return Date" library="YatraSD">
+<kw name="Click on Return Date" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:51.231" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:50.231" endtime="20210614 15:57:51.231"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ReturnDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:51.231" level="INFO">Clicking element '//input[@name='flight_destination_date']'.</msg>
+<status status="PASS" starttime="20210614 15:57:51.231" endtime="20210614 15:57:51.306"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:50.230" endtime="20210614 15:57:51.307"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:50.230" endtime="20210614 15:57:51.307"/>
+</kw>
+<kw name="And I Select the Return Date" library="YatraSD">
+<kw name="Select the RDate" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:52.314" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:51.313" endtime="20210614 15:57:52.314"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ResturnDateresult}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:52.314" level="INFO">Clicking element '//td[@data-date='26/06/2021']'.</msg>
+<status status="PASS" starttime="20210614 15:57:52.314" endtime="20210614 15:57:52.377"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:51.312" endtime="20210614 15:57:52.377"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:51.309" endtime="20210614 15:57:52.378"/>
+</kw>
+<kw name="Then I Select the Non Stop Otion" library="YatraSD">
+<kw name="Select the Non Stop option" library="YatraHomepage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NonStopcheck}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:52.379" level="INFO">Clicking element '//div[@class='filter-list']/a[@title='Non Stop Flights']/i'.</msg>
+<status status="PASS" starttime="20210614 15:57:52.379" endtime="20210614 15:57:52.464"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:52.378" endtime="20210614 15:57:52.464"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:52.378" endtime="20210614 15:57:52.464"/>
+</kw>
+<kw name="Then I Validate the Traveller Count" library="YatraSD">
+<kw name="Click on Traveller" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:53.466" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:52.465" endtime="20210614 15:57:53.466"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TravellerClick}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:53.466" level="INFO">Clicking element '//span[@class='txt-ellipses flight_passengerBox travellerPaxBox']'.</msg>
+<status status="PASS" starttime="20210614 15:57:53.466" endtime="20210614 15:57:53.529"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:52.465" endtime="20210614 15:57:53.529"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:52.465" endtime="20210614 15:57:53.529"/>
+</kw>
+<kw name="And I Selct the Traveller Count" library="YatraSD">
+<kw name="Increase the Traveller Count" library="YatraHomepage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210614 15:57:54.533" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210614 15:57:53.531" endtime="20210614 15:57:54.533"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TravellerCountIncrease}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:54.533" level="INFO">Clicking element '//div[@data-flightagegroup='adult' and @class='pax-limit clearfix col-x-fluid']/div/div/span[@class='ddSpinnerPlus']'.</msg>
+<status status="PASS" starttime="20210614 15:57:54.533" endtime="20210614 15:57:54.586"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:53.531" endtime="20210614 15:57:54.586"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:53.530" endtime="20210614 15:57:54.587"/>
+</kw>
+<kw name="Then I Click on Search Flight option" library="YatraSD">
+<kw name="Click on Search button" library="YatraHomepage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchFlightButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210614 15:57:54.588" level="INFO">Clicking element '//input[@value='Search Flights']'.</msg>
+<status status="PASS" starttime="20210614 15:57:54.588" endtime="20210614 15:57:58.225"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:54.587" endtime="20210614 15:57:58.226"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:54.587" endtime="20210614 15:57:58.226"/>
+</kw>
+<status status="PASS" starttime="20210614 15:57:30.241" endtime="20210614 15:57:58.227"/>
+</test>
+<doc>Yatra Suite description</doc>
+<status status="PASS" starttime="20210614 15:57:29.437" endtime="20210614 15:57:58.242"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Yatra11June">Yatra11June</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
