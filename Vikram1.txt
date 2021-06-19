@@ -1,0 +1,1 @@
+While testing with Selenium has its limitations, pairing the Selenium framework with a solution like Perfecto can solve those drawbacks.
