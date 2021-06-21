@@ -1,0 +1,18 @@
+1621444428343	geckodriver	INFO	Listening on 127.0.0.1:4559
+1621444431369	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofile5SCq3a"
+1621444432299	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621444434594	Marionette	INFO	Listening on port 4567
+1621444435089	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+1621444441242	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1621444453118	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+[Child 15492, MediaDecoderStateMachine #1] WARNING: Decoder=22328a33000 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:366
+[Child 15492, MediaDecoderStateMachine #1] WARNING: Decoder=22328a33000 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) - static MP4Metadata::ResultAndByteBuffer __cdecl mozilla::MP4Metadata::Metadata(mozilla::ByteStream *): Cannot parse metadata: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3478
+1621444493457	Marionette	INFO	Stopped listening on port 4567
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

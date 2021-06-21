@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.4 on win32)" generated="20210618 00:07:18.705" rpa="false">
+<suite id="s1" name="UKhouse" source="C:\Users\mohitka\PycharmProjects\UKHouseRobot\Test\UKhouse.robot">
+<test id="s1-t1" name="Printing top 5 results">
+<kw name="Given I navigate to" library="UKhouseSD">
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210618 00:07:18.979" level="INFO">Opening browser 'chrome' to base url 'https://househunt.london.ac.uk/'.</msg>
+<status status="PASS" starttime="20210618 00:07:18.979" endtime="20210618 00:07:49.044"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210618 00:07:49.045" endtime="20210618 00:07:49.185"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:07:18.978" endtime="20210618 00:07:49.185"></status>
+</kw>
+<kw name="When I click on Find Your Property option" library="UKhouseSD">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${clickFind}</arg>
+</arguments>
+<msg timestamp="20210618 00:07:49.187" level="INFO">Clicking element '//ul[@class='ng-star-inserted']/child::li/a[contains(text(),'Find Your Property')]'.</msg>
+<status status="PASS" starttime="20210618 00:07:49.186" endtime="20210618 00:07:49.302"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:07:49.186" endtime="20210618 00:07:49.303"></status>
+</kw>
+<kw name="And switched to new window" library="UKhouseSD">
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20210618 00:07:49.305" endtime="20210618 00:07:49.316"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:07:49.303" endtime="20210618 00:07:49.316"></status>
+</kw>
+<kw name="And click on search" library="UKhouseSD">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${clickSearch}</arg>
+</arguments>
+<msg timestamp="20210618 00:07:49.318" level="INFO">Clicking element '(//ul[@class='menu']/li/a[contains(text(),'Search')])[2]'.</msg>
+<status status="PASS" starttime="20210618 00:07:49.317" endtime="20210618 00:08:01.547"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:07:49.317" endtime="20210618 00:08:01.548"></status>
+</kw>
+<kw name="And select options from drop down as Royal Academy and Main Campus" library="UKhouseSD">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdownUniversity}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:01.551" level="INFO">Clicking element '//div[@style='z-index: 10;']'.</msg>
+<status status="PASS" starttime="20210618 00:08:01.550" endtime="20210618 00:08:01.670"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selectUniversity}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 00:08:01.671" endtime="20210618 00:08:02.156"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selectuniversity}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:02.158" level="INFO">Clicking element '//span[contains(text(),'RAM')]'.</msg>
+<status status="PASS" starttime="20210618 00:08:02.157" endtime="20210618 00:08:02.245"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210618 00:08:04.246" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210618 00:08:02.245" endtime="20210618 00:08:04.247"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropdownCampus}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:04.249" level="INFO">Clicking element '//div[@style='z-index: 9;']'.</msg>
+<status status="PASS" starttime="20210618 00:08:04.247" endtime="20210618 00:08:04.339"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selectCampus}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:04.340" level="INFO">Clicking element '//span[contains(text(),'Main')]'.</msg>
+<status status="PASS" starttime="20210618 00:08:04.339" endtime="20210618 00:08:04.387"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:08:01.549" endtime="20210618 00:08:04.387"></status>
+</kw>
+<kw name="And click on See Results" library="UKhouseSD">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${seeResults}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:04.388" level="INFO">Clicking element '//button[contains(text(),'See')]'.</msg>
+<status status="PASS" starttime="20210618 00:08:04.388" endtime="20210618 00:08:04.471"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30s</arg>
+</arguments>
+<msg timestamp="20210618 00:08:34.473" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20210618 00:08:04.471" endtime="20210618 00:08:34.473"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:08:04.388" endtime="20210618 00:08:34.473"></status>
+</kw>
+<kw name="And click on Price Low to High" library="UKhouseSD">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropPrice}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:34.477" level="INFO">Clicking element '(//div[@class='toggle ng-star-inserted'])[4]'.</msg>
+<status status="PASS" starttime="20210618 00:08:34.477" endtime="20210618 00:08:34.670"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210618 00:08:36.672" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210618 00:08:34.670" endtime="20210618 00:08:36.672"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selectPrice}</arg>
+</arguments>
+<msg timestamp="20210618 00:08:36.673" level="INFO">Clicking element '//div[@class='col-md-12 d p-0 group-view d-none d-md-flex']/descendant::span[contains(text(),'Price')]'.</msg>
+<status status="PASS" starttime="20210618 00:08:36.673" endtime="20210618 00:08:36.813"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:08:34.475" endtime="20210618 00:08:36.813"></status>
+</kw>
+<kw name="Then print first 5 results" library="UKhouseSD">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<msg timestamp="20210618 00:09:26.815" level="INFO">Slept 50 seconds</msg>
+<status status="PASS" starttime="20210618 00:08:36.814" endtime="20210618 00:09:26.816"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${ResultLoading}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 00:09:26.816" endtime="20210618 00:09:26.855"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${printProperty}</arg>
+</arguments>
+<status status="PASS" starttime="20210618 00:09:26.855" endtime="20210618 00:09:26.911"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:08:36.814" endtime="20210618 00:09:26.911"></status>
+</kw>
+<status status="PASS" starttime="20210618 00:07:18.978" endtime="20210618 00:09:26.912" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210618 00:07:18.708" endtime="20210618 00:09:26.914"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="UKhouse">UKhouse</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

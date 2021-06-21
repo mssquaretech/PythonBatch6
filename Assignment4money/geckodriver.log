@@ -1,0 +1,139 @@
+1621352031963	geckodriver	INFO	Listening on 127.0.0.1:2909
+1621352034947	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofileijsJQm"
+1621352035893	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621352040169	Marionette	INFO	Listening on port 2918
+1621352040219	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+1621352048783	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+[25432, IPC I/O Child] WARNING: failed to create pipe: 2: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:238
+[25432, IPC I/O Child] WARNING: Unable to create pipe named "14140.27.581681477\1028091202" in client mode.: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:71
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFFF7,name=<unknown IPC msg name>) Closed channel: cannot send/recv
+
+[23220, IPC I/O Child] WARNING: failed to create pipe: 2: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:238
+[23220, IPC I/O Child] WARNING: Unable to create pipe named "14140.28.1108002153\1342753064" in client mode.: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:71
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFFF7,name=<unknown IPC msg name>) Closed channel: cannot send/recv
+
+1621352066517	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1621352073113	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1621352074370	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:237:19
+TimedPromise@chrome://marionette/content/sync.js:222:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:431:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+1621352080778	Marionette	INFO	Stopped listening on port 2918
+1621352105942	geckodriver	INFO	Listening on 127.0.0.1:3728
+1621352108972	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofiletX6Qdy"
+1621352110368	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621352113511	Marionette	INFO	Listening on port 3787
+1621352113767	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621352120415	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+[21836, IPC I/O Child] WARNING: failed to create pipe: 2: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:238
+[21836, IPC I/O Child] WARNING: Unable to create pipe named "23652.27.1229311653\245478362" in client mode.: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:71
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xFFF7,name=<unknown IPC msg name>) Closed channel: cannot send/recv
+
+1621352139835	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://www.moneycontrol.com/, line 190: TypeError: EB.Comm is undefined
+1621352162815	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://cdn.ampproject.org/rtv/012103020108001/amp4ads-v0.mjs, line 2: Error: Failed to load: https://tpc.googlesyndication.com/pagead/images/abg/icon.png​​​
+JavaScript error: https://cdn.ampproject.org/rtv/012103020108001/amp4ads-v0.mjs, line 2: Error: Failed to load: https://tpc.googlesyndication.com/pagead/images/abg/en.png​​​
+JavaScript error: https://cdn.ampproject.org/rtv/012103020108001/amp4ads-v0.mjs, line 2: Error: Failed to load: https://tpc.googlesyndication.com/simgad/14984042980287872021?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkF7szsxCcNdhYWC-yKUERXidkcHg​​​
+1621352222485	Marionette	INFO	Stopped listening on port 3787
+1621357770892	geckodriver	INFO	Listening on 127.0.0.1:4931
+1621357773930	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofileRyKjjT"
+1621357775052	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621357777437	Marionette	INFO	Listening on port 4956
+1621357777783	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+1621357785379	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1621357803279	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+1621357814311	Marionette	INFO	Stopped listening on port 4956
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0141,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1621357964380	geckodriver	INFO	Listening on 127.0.0.1:2351
+1621357967409	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofileeqV9Yn"
+1621357967817	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621357969875	Marionette	INFO	Listening on port 2376
+1621357970039	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+1621357976923	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1621357996092	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://www.moneycontrol.com/, line 190: TypeError: EB.Comm is undefined
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+1621358019589	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1621358029067	Marionette	INFO	Stopped listening on port 2376
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1621358067905	geckodriver	INFO	Listening on 127.0.0.1:3203
+1621358070953	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofilesAybX9"
+1621358071434	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621358073404	Marionette	INFO	Listening on port 3213
+1621358073577	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+1621358081040	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1621358101171	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://www.moneycontrol.com/, line 190: TypeError: EB.Comm is undefined
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+1621358169609	Marionette	INFO	Stopped listening on port 3213
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1621358171044	geckodriver	INFO	Listening on 127.0.0.1:4066
+1621358174092	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\mohitka\\AppData\\Local\\Temp\\rust_mozprofileStIdZR"
+1621358174438	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621358176187	Marionette	INFO	Listening on port 4085
+1621358176233	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3175: unreachable code after return statement
+JavaScript warning: https://stat2.moneycontrol.com/mcjs/responsive/radar/market_radar_aws_revamp.js?v=03112020_1700, line 3181: unreachable code after return statement
+1621358183449	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://www.moneycontrol.com/, line 190: TypeError: EB.Comm is undefined
+1621358215734	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+JavaScript error: https://www.moneycontrol.com/, line 341: TypeError: parent.document.getElementById(...) is null
+1621358233591	Marionette	INFO	Stopped listening on port 4085
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
