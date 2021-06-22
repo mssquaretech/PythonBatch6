@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.4 on win32)" generated="20210622 18:19:24.137" rpa="false">
+<suite id="s1" name="Solihulltest" source="C:\Users\karan\PycharmProjects\Solihull\Tests\Solihulltest.robot">
+<kw name="Pre conditions for flow" library="Env" type="setup">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20210622 18:19:24.372" level="INFO">${CurrentDate} = 2021-06-22 18:19:24.372</msg>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:24.372"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>results_format=%y.%m.%d.%H%M%S</arg>
+</arguments>
+<assign>
+<var>${DictExtension}</var>
+</assign>
+<msg timestamp="20210622 18:19:24.372" level="INFO">${DictExtension} = results_format=21.06.22.181924</msg>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:24.372"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>C:\\Users\\karan\\PycharmProjects\\Solihull\\Config/../Result/Screenshot_${DictExtension}</arg>
+</arguments>
+<msg timestamp="20210622 18:19:24.372" level="INFO" html="yes">Created directory '&lt;a href="file://C:\Users\karan\PycharmProjects\Solihull\Result\Screenshot_results_format=21.06.22.181924"&gt;C:\Users\karan\PycharmProjects\Solihull\Result\Screenshot_results_format=21.06.22.181924&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:24.372"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>C:\\Users\\karan\\PycharmProjects\\Solihull\\Config/../Result/Screenshot_${DictExtension}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:24.372"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:24.372"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:24.372"></status>
+</kw>
+<test id="s1-t1" name="Assignment on Solihull website">
+<kw name="Given I navigate to &quot;https://www.solihullsfc.ac.uk/&quot; site using &quot;chrome&quot; browser" library="SolihullSD">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Websitelink}</arg>
+<arg>${BrowserApp}</arg>
+</arguments>
+<msg timestamp="20210622 18:19:24.372" level="INFO">Opening browser 'chrome' to base url 'https://www.solihullsfc.ac.uk/'.</msg>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:29.870"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210622 18:19:29.870" endtime="20210622 18:19:30.018"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210622 18:19:31.197" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot_results_format%3D21.06.22.181924/selenium-screenshot-1.png"&gt;&lt;img src="Screenshot_results_format%3D21.06.22.181924/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210622 18:19:30.018" endtime="20210622 18:19:31.197"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:19:31.197"></status>
+</kw>
+<kw name="When I validate &quot;Solihull Sixth Form College&quot; title page" library="SolihullSD">
+<kw name="Validate &quot;${PageTitle}&quot;" library="SolihullPage">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GetTitle}</var>
+</assign>
+<msg timestamp="20210622 18:19:31.207" level="INFO">${GetTitle} = Solihull Sixth Form College: Post 16 education, A Levels and BTECs — Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:19:31.197" endtime="20210622 18:19:31.207"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetTitle}</arg>
+<arg>${PageTitle}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:31.207" endtime="20210622 18:19:31.207"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:31.197" endtime="20210622 18:19:31.207"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:31.197" endtime="20210622 18:19:31.215"></status>
+</kw>
+<kw name="Then I Select list of langauge with starting letter" library="SolihullSD">
+<arguments>
+<arg>C</arg>
+</arguments>
+<kw name="Select langauge list" library="SolihullPage">
+<arguments>
+<arg>${LetterStartSearch}</arg>
+</arguments>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')]</arg>
+</arguments>
+<assign>
+<var>@{ListofLanguage}</var>
+</assign>
+<msg timestamp="20210622 18:19:31.239" level="INFO">@{ListofLanguage} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="147786ea4374617706a33ed5e80101bc", element="4f39b887-f090-49bb-b691-850dd8932eee")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210622 18:19:31.215" endtime="20210622 18:19:31.239"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${ListofLanguage}</arg>
+</arguments>
+<assign>
+<var>${Length}</var>
+</assign>
+<msg timestamp="20210622 18:19:31.239" level="INFO">Length is 8</msg>
+<msg timestamp="20210622 18:19:31.239" level="INFO">${Length} = 8</msg>
+<status status="PASS" starttime="20210622 18:19:31.239" endtime="20210622 18:19:31.239"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:31.239" endtime="20210622 18:19:31.239"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//title[contains(text(),'Solihull')]</arg>
+</arguments>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20210622 18:19:31.239" level="INFO">${Title} = //title[contains(text(),'Solihull')]</msg>
+<status status="PASS" starttime="20210622 18:19:31.239" endtime="20210622 18:19:31.247"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | ${Length}+1 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:19:31.247" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:19:31.247" endtime="20210622 18:19:31.348"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:31.348" endtime="20210622 18:19:31.382"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:19:31.382" level="INFO">Clicking element '//a[starts-with(text(),' C')][1]'.</msg>
+<status status="PASS" starttime="20210622 18:19:31.382" endtime="20210622 18:19:32.002"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:32.002" endtime="20210622 18:19:42.022"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:19:42.064" level="INFO">${language} = Catalan</msg>
+<status status="PASS" starttime="20210622 18:19:42.022" endtime="20210622 18:19:42.064"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:19:42.073" level="INFO">${Titletext} = Solihull Sixth Form College: educació post 16, nivells A i BTEC - Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:19:42.064" endtime="20210622 18:19:42.073"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:42.073" endtime="20210622 18:19:42.080"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:42.080" endtime="20210622 18:19:42.080"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:31.247" endtime="20210622 18:19:42.080"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:19:42.080" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:19:42.080" endtime="20210622 18:19:42.149"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:42.149" endtime="20210622 18:19:42.210"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:19:42.210" level="INFO">Clicking element '//a[starts-with(text(),' C')][2]'.</msg>
+<status status="PASS" starttime="20210622 18:19:42.210" endtime="20210622 18:19:42.914"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:42.914" endtime="20210622 18:19:52.970"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:19:53.015" level="INFO">${language} = Cebuano</msg>
+<status status="PASS" starttime="20210622 18:19:52.970" endtime="20210622 18:19:53.015"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:19:53.018" level="INFO">${Titletext} = Solihull Sixth Form College: Post 16 nga edukasyon, Usa ka lebel ug BTECs - Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:19:53.015" endtime="20210622 18:19:53.018"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:53.018" endtime="20210622 18:19:53.018"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:53.018" endtime="20210622 18:19:53.027"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:42.080" endtime="20210622 18:19:53.027"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:19:53.027" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:19:53.027" endtime="20210622 18:19:53.084"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:53.084" endtime="20210622 18:19:53.149"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:19:53.149" level="INFO">Clicking element '//a[starts-with(text(),' C')][3]'.</msg>
+<status status="PASS" starttime="20210622 18:19:53.149" endtime="20210622 18:19:53.855"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:19:53.855" endtime="20210622 18:20:03.896"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:20:03.930" level="INFO">${language} = Chichewa</msg>
+<status status="PASS" starttime="20210622 18:20:03.896" endtime="20210622 18:20:03.930"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:20:03.938" level="INFO">${Titletext} = Solihull Sixth Form College: Post 16 maphunziro, A Levels ndi BTECs - Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:20:03.930" endtime="20210622 18:20:03.938"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:03.946" endtime="20210622 18:20:03.946"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:03.946" endtime="20210622 18:20:03.946"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:53.027" endtime="20210622 18:20:03.946"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:20:03.946" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:20:03.946" endtime="20210622 18:20:04.027"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:04.035" endtime="20210622 18:20:04.088"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:20:04.088" level="INFO">Clicking element '//a[starts-with(text(),' C')][4]'.</msg>
+<status status="PASS" starttime="20210622 18:20:04.088" endtime="20210622 18:20:04.811"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:04.811" endtime="20210622 18:20:14.869"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:20:14.910" level="INFO">${language} = Chinese (Simplified)</msg>
+<status status="PASS" starttime="20210622 18:20:14.869" endtime="20210622 18:20:14.910"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:20:14.926" level="INFO">${Titletext} = Solihull Sixth Form College：16 后教育、A Level 和 BTEC — Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:20:14.918" endtime="20210622 18:20:14.926"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:14.926" endtime="20210622 18:20:14.926"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:14.926" endtime="20210622 18:20:14.926"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:20:03.946" endtime="20210622 18:20:14.926"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:20:14.926" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:20:14.926" endtime="20210622 18:20:15.007"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:15.007" endtime="20210622 18:20:15.060"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:20:15.060" level="INFO">Clicking element '//a[starts-with(text(),' C')][5]'.</msg>
+<status status="PASS" starttime="20210622 18:20:15.060" endtime="20210622 18:20:15.801"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:15.801" endtime="20210622 18:20:25.874"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:20:25.919" level="INFO">${language} = Chinese (Traditional)</msg>
+<status status="PASS" starttime="20210622 18:20:25.874" endtime="20210622 18:20:25.919"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:20:25.927" level="INFO">${Titletext} = Solihull Sixth Form College：16 後教育、A Level 和 BTEC — Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:20:25.919" endtime="20210622 18:20:25.927"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:25.927" endtime="20210622 18:20:25.935"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:25.935" endtime="20210622 18:20:25.935"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:20:14.926" endtime="20210622 18:20:25.935"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:20:25.935" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:20:25.935" endtime="20210622 18:20:26.012"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:26.012" endtime="20210622 18:20:26.059"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:20:26.059" level="INFO">Clicking element '//a[starts-with(text(),' C')][6]'.</msg>
+<status status="PASS" starttime="20210622 18:20:26.059" endtime="20210622 18:20:26.769"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:26.769" endtime="20210622 18:20:36.804"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:20:36.849" level="INFO">${language} = Corsican</msg>
+<status status="PASS" starttime="20210622 18:20:36.804" endtime="20210622 18:20:36.849"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:20:36.857" level="INFO">${Titletext} = Solihull Sixth Form College: Educazione Post 16, Livelli A è BTEC - Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:20:36.849" endtime="20210622 18:20:36.857"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:36.857" endtime="20210622 18:20:36.857"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:36.857" endtime="20210622 18:20:36.857"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:20:25.935" endtime="20210622 18:20:36.857"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:20:36.857" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:20:36.857" endtime="20210622 18:20:36.953"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:36.953" endtime="20210622 18:20:37.022"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:20:37.022" level="INFO">Clicking element '//a[starts-with(text(),' C')][7]'.</msg>
+<status status="PASS" starttime="20210622 18:20:37.022" endtime="20210622 18:20:37.716"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:37.716" endtime="20210622 18:20:47.764"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:20:47.814" level="INFO">${language} = Croatian</msg>
+<status status="PASS" starttime="20210622 18:20:47.764" endtime="20210622 18:20:47.814"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:20:47.822" level="INFO">${Titletext} = Koledž za šesti oblik Solihull: Obrazovanje nakon 16, nivoi i BTEC-ovi - Koledž za šesti oblik Solihull</msg>
+<status status="PASS" starttime="20210622 18:20:47.814" endtime="20210622 18:20:47.822"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:47.822" endtime="20210622 18:20:47.822"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:47.822" endtime="20210622 18:20:47.822"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:20:36.857" endtime="20210622 18:20:47.822"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<msg timestamp="20210622 18:20:47.822" level="INFO">Clicking element '//div[@class='selected']/a'.</msg>
+<status status="PASS" starttime="20210622 18:20:47.822" endtime="20210622 18:20:47.936"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:47.936" endtime="20210622 18:20:48.001"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[starts-with(text(),' ${LetterStartSearch}')][${i}]</arg>
+</arguments>
+<msg timestamp="20210622 18:20:48.009" level="INFO">Clicking element '//a[starts-with(text(),' C')][8]'.</msg>
+<status status="PASS" starttime="20210622 18:20:48.001" endtime="20210622 18:20:48.638"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${DropdownOpen}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:48.638" endtime="20210622 18:20:58.693"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SelectLanguageElement}</arg>
+</arguments>
+<assign>
+<var>${language}</var>
+</assign>
+<msg timestamp="20210622 18:20:58.739" level="INFO">${language} = Czech</msg>
+<status status="PASS" starttime="20210622 18:20:58.693" endtime="20210622 18:20:58.739"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Titletext}</var>
+</assign>
+<msg timestamp="20210622 18:20:58.752" level="INFO">${Titletext} = Solihull Sixth Form College: Post 16 education, A Levels and BTECs - Solihull Sixth Form College</msg>
+<status status="PASS" starttime="20210622 18:20:58.739" endtime="20210622 18:20:58.752"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Selected Language:${language} , Title:${Titletext}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 18:20:58.752" endtime="20210622 18:20:58.752"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==${Length}</arg>
+</arguments>
+<msg timestamp="20210622 18:20:58.752" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210622 18:20:58.752" endtime="20210622 18:20:58.752"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:20:47.822" endtime="20210622 18:20:58.752"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:31.247" endtime="20210622 18:20:58.752"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:31.215" endtime="20210622 18:20:58.752"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:31.215" endtime="20210622 18:20:58.752"></status>
+</kw>
+<kw name="Close Browser" library="Env" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210622 18:20:58.752" endtime="20210622 18:21:00.905"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:20:58.752" endtime="20210622 18:21:00.905"></status>
+</kw>
+<status status="PASS" starttime="20210622 18:19:24.372" endtime="20210622 18:21:00.905" critical="yes"></status>
+</test>
+<doc>SoliHull sites assignment</doc>
+<status status="PASS" starttime="20210622 18:19:24.137" endtime="20210622 18:21:00.905"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Solihulltest">Solihulltest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
