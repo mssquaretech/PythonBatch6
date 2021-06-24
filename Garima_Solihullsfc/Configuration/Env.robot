@@ -1,6 +1,6 @@
 *** Settings ***
 Library                     OperatingSystem
-Resource                    ../Pages/Adhoc.robot
+Resource                    ../Resource/Pages/Adhoc.robot
 *** Variables ***
 ${URL}                      https://www.solihullsfc.ac.uk/
 ${Browser}                  chrome
