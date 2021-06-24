@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.5 on win32)" generated="20210615 22:14:36.493" rpa="false">
+<suite id="s1" name="UKhousing" source="C:\Users\Admin\PycharmProjects\UKHousing\Tests\UKhousing.robot">
+<test id="s1-t1" name="Find property in house Hunt London">
+<kw name="Given I navigate to" library="UKhousing_SD">
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:36.853" level="INFO">Opening browser 'chrome' to base url 'https://househunt.london.ac.uk/'.</msg>
+<status status="PASS" starttime="20210615 22:14:36.853" endtime="20210615 22:14:48.060"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210615 22:14:48.060" endtime="20210615 22:14:48.236"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>20sec</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:48.236" endtime="20210615 22:14:48.244"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:36.853" endtime="20210615 22:14:48.244"></status>
+</kw>
+<kw name="And I check for correct page open" library="UKhousing_SD">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Find Your Property</arg>
+</arguments>
+<msg timestamp="20210615 22:14:48.348" level="INFO">Current page contains text 'Find Your Property'.</msg>
+<status status="PASS" starttime="20210615 22:14:48.252" endtime="20210615 22:14:48.348"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:48.244" endtime="20210615 22:14:48.348"></status>
+</kw>
+<kw name="When I search for property" library="UKhousing_SD">
+<kw name="find property" library="UKpage1">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${findPropertyXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:48.348" level="INFO">Clicking element '//li[@class = 'nav-item']/child::a[text() = 'Find Your Property']'.</msg>
+<status status="PASS" starttime="20210615 22:14:48.348" endtime="20210615 22:14:48.592"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:48.348" endtime="20210615 22:14:48.592"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:48.348" endtime="20210615 22:14:48.592"></status>
+</kw>
+<kw name="And I switch to new tab" library="UKhousing_SD">
+<kw name="go to new tab" library="UKpage1">
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:48.600" endtime="20210615 22:14:48.608"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:48.600" endtime="20210615 22:14:48.608"></status>
+</kw>
+<kw name="check new window opened" library="UKpage1">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20210615 22:14:52.394" level="INFO">Current page contains text 'Home'.</msg>
+<status status="PASS" starttime="20210615 22:14:48.616" endtime="20210615 22:14:52.394"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:48.608" endtime="20210615 22:14:52.394"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:48.592" endtime="20210615 22:14:52.394"></status>
+</kw>
+<kw name="And I click on search" library="UKhousing_SD">
+<kw name="search property" library="UKpage2">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${searchXpath}</arg>
+<arg>20sec</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:52.394" endtime="20210615 22:14:52.428"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${searchXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:52.428" level="INFO">Clicking element '//div[@id= 'block-menu_block-2']/descendant::a[text() = 'Search']'.</msg>
+<status status="PASS" starttime="20210615 22:14:52.428" endtime="20210615 22:14:54.299"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:52.394" endtime="20210615 22:14:54.299"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:52.394" endtime="20210615 22:14:54.299"></status>
+</kw>
+<kw name="And I fill dropdown with values" library="UKhousing_SD">
+<kw name="select University" library="UKpage2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${uniXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:54.307" level="INFO">Clicking element '//div[@class = 'below']/descendant::div[text() = ' University ']'.</msg>
+<status status="PASS" starttime="20210615 22:14:54.307" endtime="20210615 22:14:54.467"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${uniListXpath}</arg>
+</arguments>
+<assign>
+<var>@{uniListEle}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.399" level="INFO">@{uniListEle} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="41421d4315341b8aa13507efef584cbf", element="d5eadb3b-8500-4b98-8643-809e6489a87f")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210615 22:14:54.467" endtime="20210615 22:14:55.399"></status>
+</kw>
+<kw name="${bucket} IN [ @{uniListEle} ]" type="for">
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;d5eadb3b-8500-4b98-8643-809e6489a87f&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.415" level="INFO">${buckettext} = Architectural Association - School of Architecture</msg>
+<status status="PASS" starttime="20210615 22:14:55.399" endtime="20210615 22:14:55.415"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.415" endtime="20210615 22:14:55.415"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.415" endtime="20210615 22:14:55.415"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.399" endtime="20210615 22:14:55.415"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;c52c263d-d7de-47f9-b091-f4f0f0bef413&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.431" level="INFO">${buckettext} = Birkbeck, University of London</msg>
+<status status="PASS" starttime="20210615 22:14:55.415" endtime="20210615 22:14:55.431"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.431" endtime="20210615 22:14:55.431"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.431" endtime="20210615 22:14:55.431"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.415" endtime="20210615 22:14:55.431"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;e2420fe3-f887-4e25-951f-11432e9ce561&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.447" level="INFO">${buckettext} = City University of London</msg>
+<status status="PASS" starttime="20210615 22:14:55.431" endtime="20210615 22:14:55.447"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.447" endtime="20210615 22:14:55.447"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.447" endtime="20210615 22:14:55.447"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.431" endtime="20210615 22:14:55.447"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;afa1a478-81ce-4e73-a0c3-d4ded665f5f8&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.463" level="INFO">${buckettext} = Courtauld Institute of Art</msg>
+<status status="PASS" starttime="20210615 22:14:55.447" endtime="20210615 22:14:55.463"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.463" endtime="20210615 22:14:55.463"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.463" endtime="20210615 22:14:55.463"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.447" endtime="20210615 22:14:55.463"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;0009ee56-75be-449c-9cda-6db8c1818541&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.479" level="INFO">${buckettext} = Goldsmiths, University of London</msg>
+<status status="PASS" starttime="20210615 22:14:55.463" endtime="20210615 22:14:55.479"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.479" endtime="20210615 22:14:55.479"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.479" endtime="20210615 22:14:55.479"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.463" endtime="20210615 22:14:55.479"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;edc25c36-1f03-4d64-8e12-d6c747a9badd&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.495" level="INFO">${buckettext} = Guildhall School of Music and Drama</msg>
+<status status="PASS" starttime="20210615 22:14:55.479" endtime="20210615 22:14:55.495"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.495" endtime="20210615 22:14:55.495"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.495" endtime="20210615 22:14:55.495"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.479" endtime="20210615 22:14:55.495"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;6b6d1531-1383-4130-b716-9f56c1232a49&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.511" level="INFO">${buckettext} = King’s College London (KCL)</msg>
+<status status="PASS" starttime="20210615 22:14:55.495" endtime="20210615 22:14:55.511"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.511" endtime="20210615 22:14:55.511"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.511" endtime="20210615 22:14:55.511"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.495" endtime="20210615 22:14:55.511"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;458ee5f8-011e-4a4d-b579-e652a56cb29e&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.527" level="INFO">${buckettext} = London Business School (LBS)</msg>
+<status status="PASS" starttime="20210615 22:14:55.519" endtime="20210615 22:14:55.527"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.527" endtime="20210615 22:14:55.527"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.527" endtime="20210615 22:14:55.527"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.511" endtime="20210615 22:14:55.527"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;90e92dfa-e20d-4f9c-ab86-4fdb88c36be4&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.543" level="INFO">${buckettext} = London Contemporary Dance School</msg>
+<status status="PASS" starttime="20210615 22:14:55.535" endtime="20210615 22:14:55.543"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.543" endtime="20210615 22:14:55.543"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.543" endtime="20210615 22:14:55.543"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.535" endtime="20210615 22:14:55.543"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;17252aea-fe1a-4097-9d07-d559cf30746d&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.559" level="INFO">${buckettext} = London School of Economics and Political Science (LSE)</msg>
+<status status="PASS" starttime="20210615 22:14:55.543" endtime="20210615 22:14:55.559"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.559" endtime="20210615 22:14:55.559"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.559" endtime="20210615 22:14:55.559"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.543" endtime="20210615 22:14:55.567"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;4f512aeb-542b-4bc8-9114-380e64c74ab8&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.575" level="INFO">${buckettext} = London School of Hygiene and Tropical Medicine (LSHTM)</msg>
+<status status="PASS" starttime="20210615 22:14:55.567" endtime="20210615 22:14:55.575"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.575" endtime="20210615 22:14:55.575"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.575" endtime="20210615 22:14:55.575"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.567" endtime="20210615 22:14:55.575"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;4d760666-9db5-46d0-a401-b904acdc9522&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.599" level="INFO">${buckettext} = Pearson College London</msg>
+<status status="PASS" starttime="20210615 22:14:55.583" endtime="20210615 22:14:55.599"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.599" endtime="20210615 22:14:55.599"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.599" endtime="20210615 22:14:55.599"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.583" endtime="20210615 22:14:55.599"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;c8662100-001e-4cd8-9fe1-ac99d3cbd3bb&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.615" level="INFO">${buckettext} = Ravensbourne</msg>
+<status status="PASS" starttime="20210615 22:14:55.599" endtime="20210615 22:14:55.615"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.615" endtime="20210615 22:14:55.615"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.615" endtime="20210615 22:14:55.615"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.599" endtime="20210615 22:14:55.615"></status>
+</kw>
+<kw name="${bucket} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;41421d4315341b8aa13507efef584cbf&quot;, element=&quot;dd6ac6b1-f0a9-422d-bcde-7151d7ec920c&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<assign>
+<var>${buckettext}</var>
+</assign>
+<msg timestamp="20210615 22:14:55.631" level="INFO">${buckettext} = Royal Academy of Music (RAM)</msg>
+<status status="PASS" starttime="20210615 22:14:55.615" endtime="20210615 22:14:55.631"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+<arg>click element</arg>
+<arg>${bucket}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${bucket}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:55.631" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="41421d4315341b8aa13507efef584cbf", element="dd6ac6b1-f0a9-422d-bcde-7151d7ec920c")&gt;'.</msg>
+<status status="PASS" starttime="20210615 22:14:55.631" endtime="20210615 22:14:55.687"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.631" endtime="20210615 22:14:55.687"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${buckettext}' == 'Royal Academy of Music (RAM)'</arg>
+</arguments>
+<msg timestamp="20210615 22:14:55.687" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210615 22:14:55.687" endtime="20210615 22:14:55.687"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.615" endtime="20210615 22:14:55.687"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.399" endtime="20210615 22:14:55.687"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:54.307" endtime="20210615 22:14:55.687"></status>
+</kw>
+<kw name="select campus" library="UKpage2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${campusXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:55.687" level="INFO">Clicking element '//div[text() = ' Campus ']'.</msg>
+<status status="PASS" starttime="20210615 22:14:55.687" endtime="20210615 22:14:55.759"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${campusListXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:55.759" level="INFO">Clicking element '//div[@class = 'options']/descendant::li/span'.</msg>
+<status status="PASS" starttime="20210615 22:14:55.759" endtime="20210615 22:14:55.815"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.687" endtime="20210615 22:14:55.815"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:54.299" endtime="20210615 22:14:55.815"></status>
+</kw>
+<kw name="And I click on See result" library="UKhousing_SD">
+<kw name="see result" library="UKpage2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${seeResultXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:14:55.823" level="INFO">Clicking element '//button[text() = 'See Results']'.</msg>
+<status status="PASS" starttime="20210615 22:14:55.823" endtime="20210615 22:14:55.895"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.823" endtime="20210615 22:14:55.895"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.823" endtime="20210615 22:14:55.895"></status>
+</kw>
+<kw name="And I wait for result to be loaded" library="UKhousing_SD">
+<kw name="wait till result appear" library="UKpage2">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${buttonLoadXpath}</arg>
+<arg>30sec</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:14:55.903" endtime="20210615 22:15:15.282"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.903" endtime="20210615 22:15:15.282"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:55.895" endtime="20210615 22:15:15.282"></status>
+</kw>
+<kw name="And I sort properties as Low to High" library="UKhousing_SD">
+<kw name="sort low to high" library="UKpage2">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${dropDownXpath}</arg>
+<arg>20sec</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:15.282" endtime="20210615 22:15:15.434"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${dropDownXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:15:15.434" level="INFO">Clicking element '//span[text() = 'Default']'.</msg>
+<status status="PASS" starttime="20210615 22:15:15.434" endtime="20210615 22:15:15.594"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lowToHighXpath}</arg>
+</arguments>
+<msg timestamp="20210615 22:15:15.602" level="INFO">Clicking element '//div[@class = 'options']/descendant::li/span[contains(text(), 'Low to High')]'.</msg>
+<status status="PASS" starttime="20210615 22:15:15.594" endtime="20210615 22:15:15.746"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:15.282" endtime="20210615 22:15:15.746"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:15.282" endtime="20210615 22:15:15.746"></status>
+</kw>
+<kw name="Then I print the first five proporties" library="UKhousing_SD">
+<kw name="wait till result appear" library="UKpage2">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${buttonLoadXpath}</arg>
+<arg>30sec</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:15.746" endtime="20210615 22:15:30.826"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:15.746" endtime="20210615 22:15:30.826"></status>
+</kw>
+<kw name="print property" library="UKpage2">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${flatListXpath}</arg>
+</arguments>
+<assign>
+<var>${flatcount}</var>
+</assign>
+<msg timestamp="20210615 22:15:30.850" level="INFO">${flatcount} = 25</msg>
+<status status="PASS" starttime="20210615 22:15:30.826" endtime="20210615 22:15:30.850"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | ${flatcount} ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:30.905" level="INFO">${propertyname} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210615 22:15:30.850" endtime="20210615 22:15:30.905"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:30.905" endtime="20210615 22:15:30.905"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.905" endtime="20210615 22:15:30.905"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.850" endtime="20210615 22:15:30.905"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:30.936" level="INFO">${propertyname} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210615 22:15:30.905" endtime="20210615 22:15:30.936"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:30.936" endtime="20210615 22:15:30.936"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.936" endtime="20210615 22:15:30.936"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.905" endtime="20210615 22:15:30.936"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:30.968" level="INFO">${propertyname} = Tierney Road , Brixton/Streatham Hill</msg>
+<status status="PASS" starttime="20210615 22:15:30.936" endtime="20210615 22:15:30.968"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:30.968" endtime="20210615 22:15:30.983"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.968" endtime="20210615 22:15:30.983"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.936" endtime="20210615 22:15:30.983"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.014" level="INFO">${propertyname} = Woodville House</msg>
+<status status="PASS" starttime="20210615 22:15:30.983" endtime="20210615 22:15:31.014"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.014" endtime="20210615 22:15:31.014"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.014" endtime="20210615 22:15:31.014"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.983" endtime="20210615 22:15:31.014"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.046" level="INFO">${propertyname} = Flat Langdon Court, City Road</msg>
+<status status="PASS" starttime="20210615 22:15:31.014" endtime="20210615 22:15:31.046"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.046" endtime="20210615 22:15:31.046"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.046" endtime="20210615 22:15:31.046"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.014" endtime="20210615 22:15:31.046"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.093" level="INFO">${propertyname} = Lancaster Grove</msg>
+<status status="PASS" starttime="20210615 22:15:31.046" endtime="20210615 22:15:31.093"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.093" endtime="20210615 22:15:31.093"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.046" endtime="20210615 22:15:31.093"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.124" level="INFO">${propertyname} = Elly House, - Queen's Crescent</msg>
+<status status="PASS" starttime="20210615 22:15:31.093" endtime="20210615 22:15:31.124"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.124" endtime="20210615 22:15:31.124"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.093" endtime="20210615 22:15:31.124"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.155" level="INFO">${propertyname} = pollard house</msg>
+<status status="PASS" starttime="20210615 22:15:31.124" endtime="20210615 22:15:31.155"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.155" endtime="20210615 22:15:31.155"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.124" endtime="20210615 22:15:31.155"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.202" level="INFO">${propertyname} = A Fleet Road , Hampstead</msg>
+<status status="PASS" starttime="20210615 22:15:31.155" endtime="20210615 22:15:31.202"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.202" endtime="20210615 22:15:31.202"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.155" endtime="20210615 22:15:31.202"></status>
+</kw>
+<kw name="${i} = 10" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.233" level="INFO">${propertyname} = Queen Alexandra Mansions , Judd St</msg>
+<status status="PASS" starttime="20210615 22:15:31.202" endtime="20210615 22:15:31.233"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.233" endtime="20210615 22:15:31.233"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.202" endtime="20210615 22:15:31.233"></status>
+</kw>
+<kw name="${i} = 11" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.264" level="INFO">${propertyname} = Brecknock Road , Camden</msg>
+<status status="PASS" starttime="20210615 22:15:31.233" endtime="20210615 22:15:31.264"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.264" endtime="20210615 22:15:31.264"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.233" endtime="20210615 22:15:31.264"></status>
+</kw>
+<kw name="${i} = 12" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.296" level="INFO">${propertyname} = Crowndale Road</msg>
+<status status="PASS" starttime="20210615 22:15:31.264" endtime="20210615 22:15:31.296"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.296" endtime="20210615 22:15:31.296"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.264" endtime="20210615 22:15:31.296"></status>
+</kw>
+<kw name="${i} = 13" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.385" level="INFO">${propertyname} = A Queens Crescent</msg>
+<status status="PASS" starttime="20210615 22:15:31.296" endtime="20210615 22:15:31.385"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.393" endtime="20210615 22:15:31.393"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.296" endtime="20210615 22:15:31.393"></status>
+</kw>
+<kw name="${i} = 14" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.417" level="INFO">${propertyname} = Flat / Royal College Street</msg>
+<status status="PASS" starttime="20210615 22:15:31.393" endtime="20210615 22:15:31.417"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.417" endtime="20210615 22:15:31.417"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.393" endtime="20210615 22:15:31.417"></status>
+</kw>
+<kw name="${i} = 15" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.441" level="INFO">${propertyname} = Union Road</msg>
+<status status="PASS" starttime="20210615 22:15:31.417" endtime="20210615 22:15:31.441"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.441" endtime="20210615 22:15:31.441"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.417" endtime="20210615 22:15:31.441"></status>
+</kw>
+<kw name="${i} = 16" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.473" level="INFO">${propertyname} = Musbury Street, Stepney Green</msg>
+<status status="PASS" starttime="20210615 22:15:31.441" endtime="20210615 22:15:31.473"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.473" endtime="20210615 22:15:31.473"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.441" endtime="20210615 22:15:31.473"></status>
+</kw>
+<kw name="${i} = 17" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.497" level="INFO">${propertyname} = High Street Hornsey</msg>
+<status status="PASS" starttime="20210615 22:15:31.473" endtime="20210615 22:15:31.497"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.497" endtime="20210615 22:15:31.497"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.473" endtime="20210615 22:15:31.497"></status>
+</kw>
+<kw name="${i} = 18" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.545" level="INFO">${propertyname} = High Street Hornsey</msg>
+<status status="PASS" starttime="20210615 22:15:31.497" endtime="20210615 22:15:31.545"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.545" endtime="20210615 22:15:31.545"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.497" endtime="20210615 22:15:31.545"></status>
+</kw>
+<kw name="${i} = 19" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.593" level="INFO">${propertyname} = High Street Hornsey</msg>
+<status status="PASS" starttime="20210615 22:15:31.545" endtime="20210615 22:15:31.593"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.593" endtime="20210615 22:15:31.593"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.545" endtime="20210615 22:15:31.601"></status>
+</kw>
+<kw name="${i} = 20" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.649" level="INFO">${propertyname} = OLD FORD ROAD , Black Katz Baron Street London N ES</msg>
+<status status="PASS" starttime="20210615 22:15:31.601" endtime="20210615 22:15:31.649"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.649" endtime="20210615 22:15:31.649"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.601" endtime="20210615 22:15:31.649"></status>
+</kw>
+<kw name="${i} = 21" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.697" level="INFO">${propertyname} = OLD FORD ROAD , Blackkatz Baron Street London N ES</msg>
+<status status="PASS" starttime="20210615 22:15:31.649" endtime="20210615 22:15:31.697"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.705" endtime="20210615 22:15:31.705"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.649" endtime="20210615 22:15:31.705"></status>
+</kw>
+<kw name="${i} = 22" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.745" level="INFO">${propertyname} = BREWHOUSE WALK</msg>
+<status status="PASS" starttime="20210615 22:15:31.705" endtime="20210615 22:15:31.745"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.745" endtime="20210615 22:15:31.753"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.705" endtime="20210615 22:15:31.753"></status>
+</kw>
+<kw name="${i} = 23" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.801" level="INFO">${propertyname} = Glasshouse Walk , Black Katz Borough High Street London Bridg</msg>
+<status status="PASS" starttime="20210615 22:15:31.753" endtime="20210615 22:15:31.801"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.801" endtime="20210615 22:15:31.801"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.753" endtime="20210615 22:15:31.801"></status>
+</kw>
+<kw name="${i} = 24" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>(${flatListXpath})[${i}]</arg>
+</arguments>
+<assign>
+<var>${propertyname}</var>
+</assign>
+<msg timestamp="20210615 22:15:31.849" level="INFO">${propertyname} = Fleetway, Birkenhead Street , Black Katz Baron Street London N ES</msg>
+<status status="PASS" starttime="20210615 22:15:31.801" endtime="20210615 22:15:31.849"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${i} &lt;= 5</arg>
+<arg>log to console</arg>
+<arg>${propertyname}</arg>
+</arguments>
+<status status="PASS" starttime="20210615 22:15:31.849" endtime="20210615 22:15:31.849"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:31.801" endtime="20210615 22:15:31.849"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.850" endtime="20210615 22:15:31.849"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:30.826" endtime="20210615 22:15:31.849"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:15:15.746" endtime="20210615 22:15:31.849"></status>
+</kw>
+<status status="PASS" starttime="20210615 22:14:36.853" endtime="20210615 22:15:31.849" critical="yes"></status>
+</test>
+<doc>Find property in house Hunt London with Low price</doc>
+<status status="PASS" starttime="20210615 22:14:36.493" endtime="20210615 22:15:31.857"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="UKhousing">UKhousing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
