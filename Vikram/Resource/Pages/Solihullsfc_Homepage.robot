@@ -19,7 +19,7 @@ Check the Title of the Page
 
 Select the Language
     Click element               ${languageClick}
-    sleep       2s
+    Wait Until Element is Visible                 ${OptionWaitvisible}              timeout=15
 
 Print the Page Title
 
