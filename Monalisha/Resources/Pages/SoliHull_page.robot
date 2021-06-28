@@ -53,5 +53,5 @@ select language and print page title
         click on right most dropdown
 #        Wait Until Element Is Visible         ${DropDownexpandXpath}            5sec
         Wait Until Page Contains Element        ${OpenDropdownXpath}          10sec
-        Exit For Loop if            ${i}==${SelectedLangCount}
+#        Exit For Loop if            ${i}==${SelectedLangCount}
     END
