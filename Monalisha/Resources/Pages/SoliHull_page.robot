@@ -55,16 +55,3 @@ select language and print page title
         Wait Until Page Contains Element        ${OpenDropdownXpath}          10sec
         Exit For Loop if            ${i}==${SelectedLangCount}
     END
-
-
-
-
-
-
-
-
-
-
-
-
-
