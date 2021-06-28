@@ -4,7 +4,6 @@ Library                             SeleniumLibrary
 Resource                            Pages/SoliHull_page.robot
 
 
-
 *** Keywords ***
 I navigate to "${site_URL}" in "${Browser}"
     open browser                    ${site_URL}                         ${Browser}
@@ -23,7 +22,3 @@ I click on top right corner dropdown
 I print page title of selected languages starting with letter "${StartLetter}"
     count language starts with "${StartLetter}"
     select language and print page title
-
-
-
-
