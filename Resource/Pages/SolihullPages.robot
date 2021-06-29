@@ -4,26 +4,32 @@ Library      String
 
 *** Variables ***
 ${Dropdwon}                               //div[@class='selected']
-${Listxpath}                              //div[@class='option']/a
+${Listxpath}                              //div[@class='option']/a[contains(text(),'C')]
+
 *** Keywords ***
 Solihull
        page should contain     Solihull
 
 user search and click on Language selection dropdown
        set selenium implicit wait   5s
-       Click Element                     ${Dropdwon}
+
 
        ${count}          get element count     ${Listxpath}
 
 
        FOR   ${i}   IN RANGE      1   ${count}
-             ${Lang}     get text       (//div[@class='option']/a)[${i}]
-             ${Lang1}             Should Contain    ${Lang}     C
-             Run keyword if ${Lang1} == ${Lang}
-                click element    ${Lang1}
-                log to console    ${Lang1}
-             ELSE Continue for loop
-             Run Keyword IF ${Lang1} != ${Lang}
-             Exit for loop
+           Click Element                     ${Dropdwon}
+           wait until element is visible        (//div[@class='option']/a[contains(text(),'C')])[${i}]
+           click element          (//div[@class='option']/a[contains(text(),'C')])[${i}]
+           wait until element is not visible       //div[@class='selected']/a[@class='open']
 
+           ${Lang}     get title
+
+           log to console      ${Lang}
+#           click element       ${Lang}
+#           wait until element is visible        (//div[@class='option']/a[contains(text(),'C')])[${i}]
+
+
+#           ELSE
+#           Exit for loop
        END
