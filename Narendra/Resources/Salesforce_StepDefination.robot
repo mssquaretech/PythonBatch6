@@ -10,7 +10,7 @@ I Navigate to Salesforce URL
     Validate Salesforce URL Opened
 
 I Login into Salesforce with "${Username}" and "${Password}"
-    Provide ${Username} and ${Password}
+    Provide "${Username}" and "${Password}"
     Login with credential
 
 I Navigate to Salesforce Homepage
