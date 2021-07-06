@@ -12,7 +12,7 @@ ${LastName}                     //input[@id='name_lastName']
 ${License}                      //option[text()='Salesforce']
 ${Role}                         //option[text()='Marketing Team']
 ${Profile}                      //option[text()='Marketing User']
-${Save}                         //td[@class='pbButtonb']/child::input[@value=' Save ']
+${Save}                         //td[@class='pbButtonb']/child::input[contains(@value,'Save')]
 ${FrameafterUserCreation}       //iframe[contains(@title,'Salesforce - Developer')]
 ${UserCreated}                  //div[@class='bPageTitle']//descendant::h2
 

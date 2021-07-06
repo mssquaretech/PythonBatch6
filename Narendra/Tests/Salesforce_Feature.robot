@@ -7,7 +7,7 @@ Resource                ../Resources/Salesforce_StepDefination.robot
 *** Test Cases ***
 Login Salesforce and create user
     Given I Navigate to Salesforce URL
-    When I Login into Salesforce
+    When I Login into Salesforce with "${Username}" and "${Password}"
     And I Navigate to Salesforce Homepage
     And I will try to create new user
     And I will fill up the user creation form

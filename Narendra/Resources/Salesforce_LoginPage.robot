@@ -19,7 +19,7 @@ Validate Salesforce URL Opened
     ...     Log to console      Correct Salesforce URL opened.
     ...     ELSE    Fail    Incorrect URL opened.
 
-Provide Username and Password
+Provide ${Username} and ${Password}
     input text         ${Usernametextbox}               ${Username}
     input text         ${Passwordtextbox}               ${Password}
     sleep   2s
