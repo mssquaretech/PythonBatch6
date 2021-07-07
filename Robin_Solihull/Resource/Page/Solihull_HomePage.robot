@@ -39,9 +39,9 @@ Select the Language starting with Letter 'C'
     FOR     ${x}    IN RANGE    1   ${Count}
         Click Element             ${Path}${x}${Close}
         Wait Until Element Is Enabled       ${Deselect}         timeout=10
-    ${NewTitle}        Get Title
-    log to console      ${NewTitle}
-    Wait Until Element Is Not Visible       ${DropDownClose}        timeout=10
-    Click Element                     ${DropDown}
-    Wait Until Element Is Visible     ${ListVisible}
+        ${NewTitle}        Get Title
+        log to console      ${NewTitle}
+        Wait Until Element Is Not Visible       ${DropDownClose}        timeout=10
+        Click Element                     ${DropDown}
+        Wait Until Element Is Visible     ${ListVisible}
     END
